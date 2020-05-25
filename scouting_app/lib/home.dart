@@ -22,7 +22,7 @@ class MyHomePageState extends State<MyHomePage> {
         title: Text("624 Scouting"),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.list),
+            icon: Icon(Icons.more_vert),
             onPressed: () {
               Navigator.push(
                 context,
