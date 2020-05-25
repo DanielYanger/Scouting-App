@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'importSchedule.dart';
+
 class MySettingPage extends StatefulWidget {
   @override
   MySettingPageState createState() {
@@ -44,6 +46,14 @@ class MySettingPageState extends State<MySettingPage> {
               ),
               title: Text("Import Schedule"),
               subtitle: Text("Import a new schedule"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FilePickerDemo(),
+                  ),
+                );
+              },
             ),
           )
         ],
