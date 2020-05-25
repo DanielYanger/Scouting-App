@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:scoutingapp/form.dart';
 
 import 'form.dart';
+import 'settings.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -20,7 +21,15 @@ class MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("624 Scouting"),
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.list)),
+          IconButton(
+            icon: Icon(Icons.list),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MySettingPage()),
+              );
+            },
+          ),
         ],
       ),
       body: ListView.builder(

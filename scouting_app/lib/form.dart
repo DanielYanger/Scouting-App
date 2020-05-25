@@ -20,8 +20,6 @@ class MyFormPageState extends State<MyFormPage> {
   bool readOnly = false;
   bool showSegmentedControl = true;
   final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();
-  final GlobalKey<FormFieldState> _specifyTextFieldKey =
-      GlobalKey<FormFieldState>();
 
   ValueChanged _onChanged = (val) => print(val);
   var climbOptions = [
@@ -39,9 +37,6 @@ class MyFormPageState extends State<MyFormPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
-        actions: <Widget>[
-          IconButton(icon: Icon(Icons.list)),
-        ],
       ),
       body: Padding(
         padding: EdgeInsets.all(10),
