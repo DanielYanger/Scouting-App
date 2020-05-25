@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:scoutingapp/form.dart';
+
+import 'form.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -9,6 +10,8 @@ class MyHomePage extends StatefulWidget {
     return MyHomePageState();
   }
 }
+
+final items = List<String>.generate(100, (i) => "Match $i");
 
 class MyHomePageState extends State<MyHomePage> {
   @override
@@ -20,16 +23,20 @@ class MyHomePageState extends State<MyHomePage> {
           IconButton(icon: Icon(Icons.list)),
         ],
       ),
-      body: RaisedButton(
-        child: Row(
-          children: <Widget>[
-            Text("Match 1"),
-          ],
-        ),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => MyFormPage("Test")),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return Card(
+            child: ListTile(
+                title: Text('${items[index]}'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => MyFormPage('${items[index]}')),
+                  );
+                },
+                subtitle: Text("Test")),
           );
         },
       ),

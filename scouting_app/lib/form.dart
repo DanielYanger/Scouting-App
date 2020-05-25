@@ -302,8 +302,6 @@ class MyFormPageState extends State<MyFormPage> {
                     ),
                     onPressed: () {
                       if (_fbKey.currentState.saveAndValidate()) {
-                        print(_fbKey
-                            .currentState.value['contact_person'].runtimeType);
                         print(_fbKey.currentState.value);
                         print("validation success");
                         Navigator.pop(context);
