@@ -47,9 +47,6 @@ class MyFormPageState extends State<MyFormPage> {
               // context,
               key: _fbKey,
               // autovalidate: true,
-              initialValue: {
-                'movie_rating': 3,
-              },
               readOnly: false,
               child: Column(
                 children: <Widget>[

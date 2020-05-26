@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'home.dart';
@@ -23,7 +22,6 @@ List<List<String>> getSchedule() {
 }
 
 class ImportScreenState extends State<ImportScreen> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   Future<File> file;
 
   static Future<File> get pickFile async {
@@ -41,7 +39,6 @@ class ImportScreenState extends State<ImportScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
       appBar: AppBar(title: Text("Import Schedule")),
       body: new Center(
           child: new Padding(

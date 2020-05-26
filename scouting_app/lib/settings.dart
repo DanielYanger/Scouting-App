@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'importSchedule.dart';
+import 'stationSelector.dart';
 
 class MySettingPage extends StatefulWidget {
   @override
@@ -25,6 +26,12 @@ class MySettingPageState extends State<MySettingPage> {
               title: Text("Change Station Assignment"),
               subtitle:
                   Text("Switch between different driver station assignments"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StationSelector()),
+                );
+              },
             ),
           ),
           Card(

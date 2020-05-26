@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:scoutingapp/form.dart';
 
 import 'form.dart';
-import 'importSchedule.dart' as settings;
 import 'settings.dart';
+import 'stationSelector.dart' as selector;
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -14,7 +14,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class MyHomePageState extends State<MyHomePage> {
-  var items = settings.getSchedule();
+  var station;
+  var items = selector.modifiedSchedule();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
