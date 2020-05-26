@@ -1,49 +1,41 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:file_picker/file_picker.dart';
+import 'home.dart';
 
-class FilePickerDemo extends StatefulWidget {
+class ImportScreen extends StatefulWidget {
   @override
-  _FilePickerDemoState createState() => new _FilePickerDemoState();
+  ImportScreenState createState() => new ImportScreenState();
 }
 
-class _FilePickerDemoState extends State<FilePickerDemo> {
+String schedule = "";
+
+List<List<String>> getSchedule() {
+  List<List<String>> matches = [];
+  if (schedule.length != 0) {
+    List<String> holder = schedule.split(";");
+    for (String i in holder) {
+      matches.add(i.split(","));
+    }
+  }
+  return matches;
+}
+
+class ImportScreenState extends State<ImportScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  String _fileName;
-  String _path;
-  Map<String, String> _paths;
-  String _extension;
-  bool _loadingPath = false;
-  bool _multiPick = false;
-  FileType _pickingType = FileType.any;
-  TextEditingController _controller = new TextEditingController();
   Future<File> file;
 
-  @override
-  void initState() {
-    super.initState();
-    _controller.addListener(() => _extension = _controller.text);
-  }
-
-  static Future<File> get _openFileExplorer async {
+  static Future<File> get pickFile async {
     print('debug');
     Future<File> file = FilePicker.getFile(type: FileType.any);
     return file;
   }
 
-  void _clearCachedFiles() {
-    FilePicker.clearTemporaryFiles().then((result) {
-      _scaffoldKey.currentState.showSnackBar(
-        SnackBar(
-          backgroundColor: result ? Colors.green : Colors.red,
-          content: Text((result
-              ? 'Temporary files removed with success.'
-              : 'Failed to clean temporary files')),
-        ),
-      );
-    });
+  static Future<String> readFile(Future<File> file) async {
+    final schedule = await file;
+    print("test");
+    return schedule.readAsString();
   }
 
   @override
@@ -64,18 +56,24 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
                   children: <Widget>[
                     new RaisedButton(
                       onPressed: () {
-                        file = _openFileExplorer;
+                        file = pickFile;
                         print("success");
-                        file.then((test) {
-                          print(test.toString());
+                        readFile(file).then((data) {
+                          schedule = data;
+                          print(schedule);
                         });
-                        Navigator.pop(context);
                       },
                       child: new Text("Open file picker"),
                     ),
                     new RaisedButton(
-                      onPressed: () => _clearCachedFiles(),
-                      child: new Text("Clear temporary files"),
+                      onPressed: () {
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(builder: (context) => MyHomePage()),
+                          (Route<dynamic> route) => false,
+                        );
+                      },
+                      child: new Text("Import"),
                     ),
                   ],
                 ),
@@ -87,43 +85,3 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
     );
   }
 }
-
-/*new Builder(
-                builder: (BuildContext context) => _loadingPath
-                    ? Padding(
-                        padding: const EdgeInsets.only(bottom: 10.0),
-                        child: const CircularProgressIndicator())
-                    : _path != null || _paths != null
-                        ? new Container(
-                            padding: const EdgeInsets.only(bottom: 30.0),
-                            height: MediaQuery.of(context).size.height * 0.50,
-                            child: new Scrollbar(
-                                child: new ListView.separated(
-                              itemCount: _paths != null && _paths.isNotEmpty
-                                  ? _paths.length
-                                  : 1,
-                              itemBuilder: (BuildContext context, int index) {
-                                final bool isMultiPath =
-                                    _paths != null && _paths.isNotEmpty;
-                                final String name = 'File $index: ' +
-                                    (isMultiPath
-                                        ? _paths.keys.toList()[index]
-                                        : _fileName ?? '...');
-                                final path = isMultiPath
-                                    ? _paths.values.toList()[index].toString()
-                                    : _path;
-
-                                return new ListTile(
-                                  title: new Text(
-                                    name,
-                                  ),
-                                  subtitle: new Text(path),
-                                );
-                              },
-                              separatorBuilder:
-                                  (BuildContext context, int index) =>
-                                      new Divider(),
-                            )),
-                          )
-                        : new Container(),
-              ),*/

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:scoutingapp/form.dart';
 
 import 'form.dart';
+import 'importSchedule.dart' as settings;
 import 'settings.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -12,9 +13,8 @@ class MyHomePage extends StatefulWidget {
   }
 }
 
-final items = List<String>.generate(100, (i) => "Match $i");
-
 class MyHomePageState extends State<MyHomePage> {
+  var items = settings.getSchedule();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,19 +33,20 @@ class MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: ListView.builder(
-        itemCount: items.length,
+        itemCount: items != null && items.isNotEmpty ? items.length : 0,
         itemBuilder: (context, index) {
           return Card(
             child: ListTile(
-                title: Text('${items[index]}'),
+                title: Text('${items[index][0]}'),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => MyFormPage('${items[index]}')),
+                        builder: (context) => MyFormPage(
+                            '${items[index][0]}: ${items[index][1]}')),
                   );
                 },
-                subtitle: Text("Test")),
+                subtitle: Text("${items[index][1]}")),
           );
         },
       ),
