@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:scoutingapp/importSchedule.dart';
 import 'importSchedule.dart';
 
 class MySettingPage extends StatefulWidget {

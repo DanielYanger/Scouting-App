@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter/services.dart';
 import 'package:file_picker/file_picker.dart';
 
@@ -18,6 +17,7 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
   bool _multiPick = false;
   FileType _pickingType = FileType.any;
   TextEditingController _controller = new TextEditingController();
+  var file;
 
   @override
   void initState() {

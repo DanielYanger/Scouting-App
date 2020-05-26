@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:file_picker/file_picker.dart';
 
@@ -18,6 +19,7 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
   bool _multiPick = false;
   FileType _pickingType = FileType.any;
   TextEditingController _controller = new TextEditingController();
+  Future<File> file;
 
   @override
   void initState() {
@@ -25,34 +27,10 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
     _controller.addListener(() => _extension = _controller.text);
   }
 
-  void _openFileExplorer() async {
-    setState(() => _loadingPath = true);
-    try {
-      if (_multiPick) {
-        _path = null;
-        _paths = await FilePicker.getMultiFilePath(
-            type: _pickingType,
-            allowedExtensions: (_extension?.isNotEmpty ?? false)
-                ? _extension?.replaceAll(' ', '')?.split(',')
-                : null);
-      } else {
-        _paths = null;
-        _path = await FilePicker.getFilePath(
-            type: _pickingType,
-            allowedExtensions: (_extension?.isNotEmpty ?? false)
-                ? _extension?.replaceAll(' ', '')?.split(',')
-                : null);
-      }
-    } on PlatformException catch (e) {
-      print("Unsupported operation" + e.toString());
-    }
-    if (!mounted) return;
-    setState(() {
-      _loadingPath = false;
-      _fileName = _path != null
-          ? _path.split('/').last
-          : _paths != null ? _paths.keys.toString() : '...';
-    });
+  static Future<File> get _openFileExplorer async {
+    print('debug');
+    Future<File> file = FilePicker.getFile(type: FileType.any);
+    return file;
   }
 
   void _clearCachedFiles() {
@@ -72,10 +50,10 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: new AppBar(
-        title: const Text('Import Schedule'),
-      ),
+      appBar: AppBar(title: Text("Import Schedule")),
       body: new Center(
+          child: new Padding(
+        padding: const EdgeInsets.only(left: 10.0, right: 10.0),
         child: new SingleChildScrollView(
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -85,8 +63,15 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
                 child: Column(
                   children: <Widget>[
                     new RaisedButton(
-                      onPressed: () => _openFileExplorer(),
-                      child: new Text("Choose Schedule"),
+                      onPressed: () {
+                        file = _openFileExplorer;
+                        print("success");
+                        file.then((test) {
+                          print(test.toString());
+                        });
+                        Navigator.pop(context);
+                      },
+                      child: new Text("Open file picker"),
                     ),
                     new RaisedButton(
                       onPressed: () => _clearCachedFiles(),
@@ -95,7 +80,15 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
                   ],
                 ),
               ),
-              new Builder(
+            ],
+          ),
+        ),
+      )),
+    );
+  }
+}
+
+/*new Builder(
                 builder: (BuildContext context) => _loadingPath
                     ? Padding(
                         padding: const EdgeInsets.only(bottom: 10.0),
@@ -133,11 +126,4 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
                             )),
                           )
                         : new Container(),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+              ),*/

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'FileUtils.dart';
 
 class MyFormPage extends StatefulWidget {
   final String title;
@@ -298,13 +299,11 @@ class MyFormPageState extends State<MyFormPage> {
                     onPressed: () {
                       if (_fbKey.currentState.saveAndValidate()) {
                         print(_fbKey.currentState.value);
-                        print("validation success");
+                        FileUtils.saveToFile(
+                            _fbKey.currentState.value.toString(), title);
                         Navigator.pop(context);
                       } else {
-                        print(_fbKey
-                            .currentState.value['contact_person'].runtimeType);
-                        print(_fbKey.currentState.value);
-                        print("validation failed");
+                        print("Warning: Submission Failed");
                       }
                     },
                   ),
