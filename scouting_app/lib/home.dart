@@ -20,7 +20,7 @@ class MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("624 Scouting"),
+        title: Text("624 Scouting App"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.more_vert),

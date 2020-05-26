@@ -60,7 +60,7 @@ class ImportScreenState extends State<ImportScreen> {
                           print(schedule);
                         });
                       },
-                      child: new Text("Choose Scheduler"),
+                      child: new Text("Choose Schedule"),
                     ),
                     new RaisedButton(
                       onPressed: () {

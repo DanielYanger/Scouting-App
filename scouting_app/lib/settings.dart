@@ -14,13 +14,15 @@ class MySettingPageState extends State<MySettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Settings")),
+      appBar: AppBar(
+        title: Text("Settings"),
+      ),
       body: ListView(
         children: <Widget>[
           Card(
             child: ListTile(
               leading: Icon(
-                Icons.edit,
+                Icons.import_export,
                 size: 50,
               ),
               title: Text("Change Station Assignment"),
