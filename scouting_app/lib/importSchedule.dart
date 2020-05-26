@@ -54,13 +54,13 @@ class ImportScreenState extends State<ImportScreen> {
                     new RaisedButton(
                       onPressed: () {
                         file = pickFile;
-                        print("success");
                         readFile(file).then((data) {
                           schedule = data;
+                          print("File Picked");
                           print(schedule);
                         });
                       },
-                      child: new Text("Open file picker"),
+                      child: new Text("Choose Scheduler"),
                     ),
                     new RaisedButton(
                       onPressed: () {

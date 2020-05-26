@@ -20,7 +20,7 @@ class MySettingPageState extends State<MySettingPage> {
           Card(
             child: ListTile(
               leading: Icon(
-                Icons.settings,
+                Icons.edit,
                 size: 50,
               ),
               title: Text("Change Station Assignment"),
@@ -47,7 +47,7 @@ class MySettingPageState extends State<MySettingPage> {
           Card(
             child: ListTile(
               leading: Icon(
-                Icons.restore,
+                Icons.cloud_download,
                 size: 50,
               ),
               title: Text("Import Schedule"),

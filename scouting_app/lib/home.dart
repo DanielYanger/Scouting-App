@@ -34,22 +34,44 @@ class MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: ListView.builder(
-        itemCount: items != null && items.isNotEmpty ? items.length : 0,
-        itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-                title: Text('${items[index][0]}'),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => MyFormPage(
-                            '${items[index][0]}: ${items[index][1]}')),
-                  );
-                },
-                subtitle: Text("${items[index][1]}")),
-          );
-        },
+        itemCount: items != null && items.isNotEmpty ? items.length : 1,
+        itemBuilder: items != null && items.isNotEmpty
+            ? (context, index) {
+                return Card(
+                  child: ListTile(
+                      title: Text('${items[index][0]}'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MyFormPage(
+                                  '${items[index][0]}: ${items[index][1]}')),
+                        );
+                      },
+                      subtitle: Text("${items[index][1]}")),
+                );
+              }
+            : (context, index) {
+                return Card(
+                  child: ListTile(
+                    title: Center(child: Text("No Schedule Imported!")),
+                    subtitle: Center(
+                        child:
+                            Text("Please import a schedule in the settings.")),
+                    isThreeLine: true,
+                    leading: Icon(
+                      Icons.warning,
+                      size: 50,
+                      color: Colors.red,
+                    ),
+                    trailing: Icon(
+                      Icons.warning,
+                      size: 50,
+                      color: Colors.red,
+                    ),
+                  ),
+                );
+              },
       ),
     );
   }
