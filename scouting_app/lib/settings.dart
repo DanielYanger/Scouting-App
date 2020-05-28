@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'importSchedule.dart';
 import 'stationSelector.dart';
+import 'formReader.dart';
 
 class MySettingPage extends StatefulWidget {
   @override
@@ -45,6 +46,12 @@ class MySettingPageState extends State<MySettingPage> {
               ),
               title: Text("Import Form"),
               subtitle: Text("Import a new scouting form"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FormReader()),
+                );
+              },
             ),
           ),
           Card(
@@ -62,7 +69,7 @@ class MySettingPageState extends State<MySettingPage> {
                 );
               },
             ),
-          )
+          ),
         ],
       ),
     );

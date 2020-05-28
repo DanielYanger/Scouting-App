@@ -45,7 +45,8 @@ class MyHomePageState extends State<MyHomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => MyFormPage(
-                                  '${items[index][0]}: ${items[index][1]}')),
+                                  title:
+                                      '${items[index][0]}: ${items[index][1]}')),
                         );
                       },
                       subtitle: Text("${items[index][1]}")),
