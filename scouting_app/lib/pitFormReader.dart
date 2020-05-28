@@ -6,13 +6,14 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'home.dart';
 import 'form.dart' as FormBuilder;
 
-class FormReader extends StatefulWidget {
+
+class PitFormReader extends StatefulWidget {
   final String stringForm;
 
-  FormReader({Key key, this.stringForm}) : super(key: key);
+  PitFormReader({Key key, this.stringForm}) : super(key: key);
   @override
-  FormReaderState createState() {
-    return FormReaderState();
+  PitFormReaderState createState() {
+    return PitFormReaderState();
   }
 }
 
@@ -37,15 +38,15 @@ List<DropdownMenuItem<dynamic>> createSetDropdown(List<dynamic> list) {
   print(list);
   result = list
       .map((option) => DropdownMenuItem(
-            child: Text('$option'),
-            value: option,
-          ))
+    child: Text('$option'),
+    value: option,
+  ))
       .toList();
   print(result);
   return result;
 }
 
-class FormReaderState extends State<FormReader> {
+class PitFormReaderState extends State<PitFormReader> {
   Future<File> file;
   String stringForm = "";
 
@@ -85,9 +86,9 @@ class FormReaderState extends State<FormReader> {
           attribute: tempWidget[1],
           options: options
               .map((lang) => FormBuilderFieldOption(
-                    value: lang,
-                    child: Text('$lang'),
-                  ))
+            value: lang,
+            child: Text('$lang'),
+          ))
               .toList(growable: false),
           decoration: InputDecoration(labelText: tempWidget[1]),
           leadingInput: true,
@@ -118,9 +119,9 @@ class FormReaderState extends State<FormReader> {
           attribute: tempWidget[1],
           options: ["Yes", "No"]
               .map((lang) => FormBuilderFieldOption(
-                    value: lang,
-                    child: Text('$lang'),
-                  ))
+            value: lang,
+            child: Text('$lang'),
+          ))
               .toList(growable: false),
           validators: [FormBuilderValidators.required()],
           decoration: InputDecoration(labelText: tempWidget[1]),
@@ -210,43 +211,43 @@ class FormReaderState extends State<FormReader> {
       ),
       body: new Center(
           child: new Padding(
-        padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-        child: new SingleChildScrollView(
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Padding(
-                padding: const EdgeInsets.only(top: 50.0, bottom: 20.0),
-                child: Column(
-                  children: <Widget>[
-                    new RaisedButton(
-                      onPressed: () {
-                        file = pickFile;
-                        readFile(file).then((data) {
-                          stringForm = data;
-                          print("File Picked");
-                          formCreator(stringForm);
-                        });
-                      },
-                      child: new Text("Choose Form"),
+            padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+            child: new SingleChildScrollView(
+              child: new Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Padding(
+                    padding: const EdgeInsets.only(top: 50.0, bottom: 20.0),
+                    child: Column(
+                      children: <Widget>[
+                        new RaisedButton(
+                          onPressed: () {
+                            file = pickFile;
+                            readFile(file).then((data) {
+                              stringForm = data;
+                              print("File Picked");
+                              formCreator(stringForm);
+                            });
+                          },
+                          child: new Text("Choose Form"),
+                        ),
+                        new RaisedButton(
+                          onPressed: () {
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(builder: (context) => MyHomePage()),
+                                  (Route<dynamic> route) => false,
+                            );
+                          },
+                          child: new Text("Import"),
+                        ),
+                      ],
                     ),
-                    new RaisedButton(
-                      onPressed: () {
-                        Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(builder: (context) => MyHomePage()),
-                          (Route<dynamic> route) => false,
-                        );
-                      },
-                      child: new Text("Import"),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ),
-      )),
+            ),
+          )),
     );
   }
 }

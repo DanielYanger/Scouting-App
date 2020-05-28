@@ -12,12 +12,30 @@ class ImportScreen extends StatefulWidget {
 
 String schedule = "";
 
-List<List<String>> getSchedule() {
+List<List<String>> getSchedule(int station) {
   List<List<String>> matches = [];
+  List<int> teams = [];
   if (schedule.length != 0) {
     List<String> holder = schedule.split(";");
-    for (String i in holder) {
-      matches.add(i.split(","));
+    if (station != 6) {
+      for (String i in holder) {
+        matches.add(i.split(","));
+      }
+    } else if (station == 6) {
+      outerLoop:
+      for (String i in holder) {
+        List<String> temp = i.split(",");
+        for (int j in teams) {
+          if (int.parse(temp[1]) == j) {
+            continue outerLoop;
+          }
+        }
+        teams.add(int.parse(temp[1]));
+      }
+      teams.sort();
+      for (int i in teams) {
+        matches.add([i.toString(), "Pit Scouting"]);
+      }
     }
   }
   return matches;

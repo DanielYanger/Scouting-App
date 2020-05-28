@@ -14,10 +14,15 @@ var station = 0;
 List<List<String>> modifiedSchedule() {
   //stations go from 0-5
   List<List<String>> modifiedMatches = [];
-  List<List<String>> matches = importSchedule.getSchedule();
-  for (int i = station; i < matches.length; i += 6) {
-    modifiedMatches.add(matches[i]);
+  List<List<String>> matches = importSchedule.getSchedule(station);
+  if (station == 6) {
+    modifiedMatches = matches;
+  } else {
+    for (int i = station; i < matches.length; i += 6) {
+      modifiedMatches.add(matches[i]);
+    }
   }
+
   return modifiedMatches;
 }
 
@@ -40,13 +45,20 @@ class StationSelectorState extends State<StationSelector> {
                   attribute: "station",
                   onChanged: _onChanged,
                   validators: [FormBuilderValidators.required()],
-                  options:
-                      ["Red 1", "Red 2", 'Red 3', 'Blue 1', 'Blue 2', 'Blue 3']
-                          .map((lang) => FormBuilderFieldOption(
-                                value: lang,
-                                child: Text('$lang'),
-                              ))
-                          .toList(growable: false),
+                  options: [
+                    "Red 1",
+                    "Red 2",
+                    'Red 3',
+                    'Blue 1',
+                    'Blue 2',
+                    'Blue 3',
+                    "Pit Scouting"
+                  ]
+                      .map((lang) => FormBuilderFieldOption(
+                            value: lang,
+                            child: Text('$lang'),
+                          ))
+                      .toList(growable: false),
                 ),
                 MaterialButton(
                   color: Theme.of(context).accentColor,
@@ -69,6 +81,8 @@ class StationSelectorState extends State<StationSelector> {
                         station = 4;
                       } else if (value == ("{station: Blue 3}")) {
                         station = 5;
+                      } else if (value == ("{station: Pit Scouting}")) {
+                        station = 6;
                       }
                     }
                     Navigator.pushAndRemoveUntil(

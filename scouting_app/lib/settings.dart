@@ -44,8 +44,24 @@ class MySettingPageState extends State<MySettingPage> {
                 Icons.restore_page,
                 size: 50,
               ),
-              title: Text("Import Form"),
+              title: Text("Import Match Form"),
               subtitle: Text("Import a new scouting form"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FormReader()),
+                );
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: Icon(
+                Icons.build,
+                size: 50,
+              ),
+              title: Text("Import Pit Form"),
+              subtitle: Text("Import a new pit scouting form"),
               onTap: () {
                 Navigator.push(
                   context,
