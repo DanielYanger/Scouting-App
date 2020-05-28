@@ -93,7 +93,9 @@ class MyFormPageState extends State<MyFormPage> {
                             title: Center(child: Text("No Form Imported!")),
                             subtitle: Center(
                                 child: Text(
-                                    "Please import a form in the settings.")),
+                              "Please import a form in the settings.",
+                              textAlign: TextAlign.center,
+                            )),
                             isThreeLine: true,
                             leading: Icon(
                               Icons.warning,

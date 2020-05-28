@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'importSchedule.dart';
 import 'stationSelector.dart';
 import 'formReader.dart';
+import 'pitFormReader.dart';
 
 class MySettingPage extends StatefulWidget {
   @override
@@ -65,7 +66,7 @@ class MySettingPageState extends State<MySettingPage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FormReader()),
+                  MaterialPageRoute(builder: (context) => PitFormReader()),
                 );
               },
             ),

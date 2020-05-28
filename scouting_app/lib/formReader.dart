@@ -206,7 +206,7 @@ class FormReaderState extends State<FormReader> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Import Form"),
+        title: Text("Import Match Form"),
       ),
       body: new Center(
           child: new Padding(
@@ -228,7 +228,7 @@ class FormReaderState extends State<FormReader> {
                           formCreator(stringForm);
                         });
                       },
-                      child: new Text("Choose Form"),
+                      child: new Text("Choose Match Form"),
                     ),
                     new RaisedButton(
                       onPressed: () {

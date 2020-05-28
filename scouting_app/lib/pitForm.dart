@@ -93,7 +93,9 @@ class MyPitFormPageState extends State<MyPitFormPage> {
                             title: Center(child: Text("No Pit Form Imported!")),
                             subtitle: Center(
                                 child: Text(
-                                    "Please import a pit form in the settings.")),
+                              "Please import a pit form in the settings.",
+                              textAlign: TextAlign.center,
+                            )),
                             isThreeLine: true,
                             leading: Icon(
                               Icons.warning,

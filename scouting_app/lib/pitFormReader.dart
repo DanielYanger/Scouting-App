@@ -206,7 +206,7 @@ class PitFormReaderState extends State<PitFormReader> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Import Form"),
+        title: Text("Import Pit Scouting Form"),
       ),
       body: new Center(
           child: new Padding(
@@ -228,7 +228,7 @@ class PitFormReaderState extends State<PitFormReader> {
                           formCreator(stringForm);
                         });
                       },
-                      child: new Text("Choose Form"),
+                      child: new Text("Choose Pit Scouting Form"),
                     ),
                     new RaisedButton(
                       onPressed: () {

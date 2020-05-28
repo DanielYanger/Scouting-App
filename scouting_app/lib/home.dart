@@ -17,7 +17,7 @@ class MyHomePage extends StatefulWidget {
 class MyHomePageState extends State<MyHomePage> {
   var station;
   var items = selector.modifiedSchedule();
-  bool isPit = selector.isPit();
+  var isPit = selector.isPit();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +46,7 @@ class MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: isPit
+                              builder: !isPit
                                   ? (context) => MyFormPage(
                                       title:
                                           '${items[index][0]}: ${items[index][1]}')
