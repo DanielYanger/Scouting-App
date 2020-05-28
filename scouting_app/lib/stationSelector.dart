@@ -26,6 +26,14 @@ List<List<String>> modifiedSchedule() {
   return modifiedMatches;
 }
 
+bool isPit() {
+  //stations go from 0-5
+  if (station == 6) {
+    return true;
+  }
+  return false;
+}
+
 class StationSelectorState extends State<StationSelector> {
   ValueChanged _onChanged = (val) => print(val);
   final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();

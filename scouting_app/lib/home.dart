@@ -5,6 +5,7 @@ import 'package:scoutingapp/form.dart';
 import 'form.dart';
 import 'settings.dart';
 import 'stationSelector.dart' as selector;
+import 'pitForm.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -16,6 +17,7 @@ class MyHomePage extends StatefulWidget {
 class MyHomePageState extends State<MyHomePage> {
   var station;
   var items = selector.modifiedSchedule();
+  bool isPit = selector.isPit();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,9 +46,13 @@ class MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => MyFormPage(
-                                  title:
-                                      '${items[index][0]}: ${items[index][1]}')),
+                              builder: isPit
+                                  ? (context) => MyFormPage(
+                                      title:
+                                          '${items[index][0]}: ${items[index][1]}')
+                                  : (context) => MyPitFormPage(
+                                      title:
+                                          '${items[index][1]}: ${items[index][0]}')),
                         );
                       },
                       subtitle: Text("${items[index][1]}")),
