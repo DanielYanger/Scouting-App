@@ -16,7 +16,9 @@ class FileUtils {
 
   static Future<File> saveToFile(String data, String title) async {
     final path = await getFilePath;
-    var file = new File('$path/$title.txt');
+    var directory = new Directory('$path/matchdata');
+    directory.create();
+    var file = new File('$path/matchdata/$title.txt');
     print(file.path);
     file.create();
     return file.writeAsString(data);
@@ -24,7 +26,9 @@ class FileUtils {
 
   static Future<String> createFile(String fileName) async {
     final path = await getFilePath;
-    var file = new File('$path/$fileName.txt');
+    var directory = new Directory('$path/matchdata');
+    directory.create();
+    var file = new File('$path/matchdata/$fileName.txt');
     print(file.path);
     file.create();
     return "Success";
