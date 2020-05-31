@@ -17,6 +17,7 @@ List<List<String>> getSchedule(int station) {
   List<int> teams = [];
   if (schedule.length != 0) {
     List<String> holder = schedule.split(";");
+    holder.removeLast();
     if (station != 6) {
       for (String i in holder) {
         matches.add(i.split(","));
