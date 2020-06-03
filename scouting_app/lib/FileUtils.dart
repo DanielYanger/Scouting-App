@@ -24,6 +24,16 @@ class FileUtils {
     return file.writeAsString(data);
   }
 
+  static Future<File> saveToFileJSON(String data, String title) async {
+    final path = await getFilePath;
+    var directory = new Directory('$path/matchdata');
+    directory.create();
+    var file = new File('$path/matchdata/$title.json');
+    print(file.path);
+    file.create();
+    return file.writeAsString(data);
+  }
+
   static Future<String> createFile(String fileName) async {
     final path = await getFilePath;
     var directory = new Directory('$path/matchdata');

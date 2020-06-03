@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scouting_app/android/key.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scouting_app/lib/jsonConvertor.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/FileUtils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/FileUtils.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/form.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +27,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/scouting_app/android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scouting_master" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>

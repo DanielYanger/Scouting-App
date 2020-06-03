@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 import 'FileUtils.dart';
+import 'dart:convert';
 
 class MyFormPage extends StatefulWidget {
   final String title;
@@ -58,9 +59,9 @@ class MyFormPageState extends State<MyFormPage> {
                                         if (_fbKey.currentState
                                             .saveAndValidate()) {
                                           print(_fbKey.currentState.value);
-                                          FileUtils.saveToFile(
-                                              _fbKey.currentState.value
-                                                  .toString(),
+                                          print(_fbKey.currentState.toJson());
+                                          FileUtils.saveToFileJSON(
+                                              _fbKey.currentState.toJson(),
                                               widget.title);
                                           Navigator.pop(context);
                                         } else {
