@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:scoutingapp/form.dart';
+import 'scouting_icons_icons.dart';
 
 import 'form.dart';
 import 'settings.dart';
@@ -23,6 +24,10 @@ class MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("624 Scouting App"),
+        leading: Icon(
+          ScoutingIcons.radioactive,
+          size: 50,
+        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.more_vert),
@@ -62,9 +67,10 @@ class MyHomePageState extends State<MyHomePage> {
                 return Card(
                   child: ListTile(
                     title: Center(child: Text("No Schedule Imported!")),
-                    subtitle: Center(
-                        child:
-                            Text("Please import a schedule in the settings.")),
+                    subtitle: Text(
+                      "Please import a schedule in the settings.",
+                      textAlign: TextAlign.center,
+                    ),
                     isThreeLine: true,
                     leading: Icon(
                       Icons.warning,

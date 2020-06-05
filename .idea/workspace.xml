@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/icons/ScoutingIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scouting_app/lib/scouting_icons_icons.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,17 +32,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scouting_app/lib" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\android" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib\assets" />
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib" />
+      <recent name="D:\Documents\Flutter_Apps\Scouting_App\icons" />
+      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\android" />
     </key>
   </component>
   <component name="RunManager">
@@ -84,5 +90,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1591288822555">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591288822555" />
+    <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1591288816282">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591288816282" />
   </component>
 </project>
