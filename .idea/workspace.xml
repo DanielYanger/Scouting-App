@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/icons/ScoutingIcons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scouting_app/lib/scouting_icons_icons.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/ScoutingIcons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/icons/ScoutingIcons.ttf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +35,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app" />
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib\assets" />
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib" />
     </key>
@@ -96,6 +94,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591288822555" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1591394763113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591394763113" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1591394763113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591394763113" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1591394763113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591394763113" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1591394763113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591394763113" />
     <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1591288816282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
