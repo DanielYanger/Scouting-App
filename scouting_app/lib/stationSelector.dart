@@ -36,6 +36,25 @@ bool isPit() {
   return false;
 }
 
+// ignore: missing_return
+String initialStation(int station) {
+  if (station == 0) {
+    return "Red 1";
+  } else if (station == 1) {
+    return "Red 2";
+  } else if (station == 2) {
+    return "Red 3";
+  } else if (station == 3) {
+    return "Blue 1";
+  } else if (station == 4) {
+    return "Blue 2";
+  } else if (station == 5) {
+    return "Blue 3";
+  } else if (station == 6) {
+    return "Pit Scouting";
+  }
+}
+
 class StationSelectorState extends State<StationSelector> {
   ValueChanged _onChanged = (val) => print(val);
   final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();
@@ -69,6 +88,7 @@ class StationSelectorState extends State<StationSelector> {
                             child: Text('$lang'),
                           ))
                       .toList(growable: false),
+                  initialValue: initialStation(station),
                 ),
                 MaterialButton(
                   color: Theme.of(context).accentColor,
