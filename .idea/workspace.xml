@@ -4,14 +4,20 @@
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/APK/app-arm64-v8a-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/APK/app-arm64-v8a-release.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APK/app-armeabi-v7a-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/APK/app-armeabi-v7a-release.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APK/app-x86_64-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/APK/app-x86_64-release.apk" afterDir="false" />
 =======
+=======
+>>>>>>> parent of fde3ce9... App Icon update
       <change beforePath="$PROJECT_DIR$/scouting_app/lib/form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/form.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scouting_app/lib/formReader.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/formReader.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scouting_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scouting_app/lib/stationSelector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/stationSelector.dart" afterDir="false" />
+<<<<<<< HEAD
+>>>>>>> parent of fde3ce9... App Icon update
+=======
 >>>>>>> parent of fde3ce9... App Icon update
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +45,11 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../scouting_master" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scouting_app/lib" />
+>>>>>>> parent of fde3ce9... App Icon update
 =======
     <property name="last_opened_file_path" value="$PROJECT_DIR$/scouting_app/lib" />
 >>>>>>> parent of fde3ce9... App Icon update
@@ -48,9 +58,13 @@
   </component>
   <component name="RecentsManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app" />
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib\assets" />
+=======
+    <key name="CopyFile.RECENT_KEYS">
+>>>>>>> parent of fde3ce9... App Icon update
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib" />
 =======
     <key name="CopyFile.RECENT_KEYS">
@@ -59,6 +73,9 @@
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib\assests" />
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\icons" />
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\android" />
+<<<<<<< HEAD
+>>>>>>> parent of fde3ce9... App Icon update
+=======
 >>>>>>> parent of fde3ce9... App Icon update
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -110,6 +127,7 @@
       <updated>1591909045263</updated>
     </task>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <task id="LOCAL-00003" summary="New Color">
       <created>1591910100960</created>
       <option name="number" value="00003" />
@@ -132,6 +150,9 @@
       <updated>1591911758682</updated>
     </task>
     <option name="localTasksCounter" value="6" />
+=======
+    <option name="localTasksCounter" value="3" />
+>>>>>>> parent of fde3ce9... App Icon update
 =======
     <option name="localTasksCounter" value="3" />
 >>>>>>> parent of fde3ce9... App Icon update
@@ -160,9 +181,13 @@
     <MESSAGE value="New App Icon" />
     <MESSAGE value="New Icons" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <MESSAGE value="New Color" />
     <MESSAGE value="App Icon update" />
     <option name="LAST_COMMIT_MESSAGE" value="App Icon update" />
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="New Icons" />
+>>>>>>> parent of fde3ce9... App Icon update
 =======
     <option name="LAST_COMMIT_MESSAGE" value="New Icons" />
 >>>>>>> parent of fde3ce9... App Icon update
@@ -170,6 +195,7 @@
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1591911756783">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -196,6 +222,8 @@
     </state>
     <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591911759814" />
 =======
+=======
+>>>>>>> parent of fde3ce9... App Icon update
     <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1591910099600">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -220,6 +248,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591909433737" />
+<<<<<<< HEAD
+>>>>>>> parent of fde3ce9... App Icon update
+=======
 >>>>>>> parent of fde3ce9... App Icon update
     <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1591650636597">
       <screen x="0" y="0" width="1920" height="1040" />
