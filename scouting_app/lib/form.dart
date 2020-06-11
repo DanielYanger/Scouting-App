@@ -74,9 +74,7 @@ class MyFormPageState extends State<MyFormPage> {
                                   ),
                                   Expanded(
                                     child: MaterialButton(
-                                      color: Theme
-                                          .of(context)
-                                          .primaryColor,
+                                      color: Theme.of(context).primaryColor,
                                       child: Text(
                                         "Reset",
                                         style: TextStyle(color: Colors.white),

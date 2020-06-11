@@ -92,9 +92,7 @@ class StationSelectorState extends State<StationSelector> {
                   initialValue: initialStation(station),
                 ),
                 MaterialButton(
-                  color: Theme
-                      .of(context)
-                      .primaryColor,
+                  color: Theme.of(context).primaryColor,
                   child: Text(
                     "Submit",
                     style: TextStyle(color: Colors.white),

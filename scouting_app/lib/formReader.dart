@@ -111,9 +111,7 @@ class FormReaderState extends State<FormReader> {
             attribute: tempWidget[1],
             options: createSetCheckbox(options),
             decoration: InputDecoration(labelText: tempWidget[1]),
-            activeColor: Theme
-                .of(context)
-                .primaryColor,
+            activeColor: Theme.of(context).primaryColor,
           ),
         );
         print(FormBuilder.form);
@@ -124,17 +122,14 @@ class FormReaderState extends State<FormReader> {
         FormBuilder.addWidget(new FormBuilderRadio(
           attribute: tempWidget[1],
           options: ["Yes", "No"]
-              .map((lang) =>
-              FormBuilderFieldOption(
-                value: lang,
-                child: Text('$lang'),
-              ))
+              .map((lang) => FormBuilderFieldOption(
+                    value: lang,
+                    child: Text('$lang'),
+                  ))
               .toList(growable: false),
           validators: [FormBuilderValidators.required()],
           decoration: InputDecoration(labelText: tempWidget[1]),
-          activeColor: Theme
-              .of(context)
-              .primaryColor,
+          activeColor: Theme.of(context).primaryColor,
         ));
         print("YEEEEET");
         print(FormBuilder.form);
@@ -184,9 +179,7 @@ class FormReaderState extends State<FormReader> {
           decoration: InputDecoration(
             labelText: tempWidget[1],
           ),
-          activeColor: Theme
-              .of(context)
-              .primaryColor,
+          activeColor: Theme.of(context).primaryColor,
         ));
       }
       //break
