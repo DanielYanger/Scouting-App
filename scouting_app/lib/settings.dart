@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:scoutingapp/scouting_icons_icons.dart';
 
-import 'importSchedule.dart';
-import 'stationSelector.dart';
 import 'formReader.dart';
+import 'importSchedule.dart';
 import 'pitFormReader.dart';
+import 'stationSelector.dart';
 
 class MySettingPage extends StatefulWidget {
   @override
@@ -99,7 +100,8 @@ class MySettingPageState extends State<MySettingPage> {
               onTap: () {
                 showAboutDialog(
                     context: context,
-                    applicationVersion: '1.0.0',
+                    applicationIcon: Icon(ScoutingIcons.radioactive),
+                    applicationVersion: '1.1.2',
                     applicationLegalese:
                         "This app was developed by Daniel Yang, a programmer for FRC Team 624. This is one of the two apps developed for the Team 624 Scouting Team for use in many years to come. The purpose of this app is to allow scouts to use the team devices to scout, independent of any connection.");
               },

@@ -11,7 +11,7 @@
 ///      fonts:
 ///       - asset: fonts/ScoutingIcons.ttf
 ///
-/// 
+///
 /// * Entypo, Copyright (C) 2012 by Daniel Bruce
 ///         Author:    Daniel Bruce
 ///         License:   SIL (http://scripts.sil.org/OFL)
@@ -37,11 +37,20 @@ class ScoutingIcons {
   static const _kFontFam = 'ScoutingIcons';
   static const _kFontPkg = null;
 
-  static const IconData down_arrow = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData boolean = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData radio_button = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData counter = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData radioactive = IconData(0xea79, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData sliders = IconData(0xf1de, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData divider = IconData(0xf7a4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData down_arrow =
+      IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData boolean =
+      IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData radio_button =
+      IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData counter =
+      IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData A624_vector_trans =
+      IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData radioactive =
+      IconData(0xea79, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData sliders =
+      IconData(0xf1de, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData divider =
+      IconData(0xf7a4, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
