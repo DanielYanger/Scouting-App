@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 import 'FileUtils.dart';
-import 'dart:convert';
 
 class MyFormPage extends StatefulWidget {
   final String title;
@@ -50,7 +49,7 @@ class MyFormPageState extends State<MyFormPage> {
                                 children: <Widget>[
                                   Expanded(
                                     child: MaterialButton(
-                                      color: Theme.of(context).accentColor,
+                                      color: Theme.of(context).primaryColor,
                                       child: Text(
                                         "Submit",
                                         style: TextStyle(color: Colors.white),
@@ -75,7 +74,9 @@ class MyFormPageState extends State<MyFormPage> {
                                   ),
                                   Expanded(
                                     child: MaterialButton(
-                                      color: Theme.of(context).accentColor,
+                                      color: Theme
+                                          .of(context)
+                                          .primaryColor,
                                       child: Text(
                                         "Reset",
                                         style: TextStyle(color: Colors.white),

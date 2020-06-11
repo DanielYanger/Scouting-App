@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/icons/ScoutingIcons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/icons/ScoutingIcons.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/formReader.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/formReader.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scouting_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/scouting_icons_icons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/scouting_icons_icons.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/settings.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/stationSelector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/stationSelector.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591906599639</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="New Icons">
+      <created>1591909045263</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591909045263</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -108,35 +114,36 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="New App Icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="New App Icon" />
+    <MESSAGE value="New Icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Icons" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1591906596152">
+    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1591909043739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591906596152" />
+    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591909043739" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1591650712188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591650712188" />
-    <state width="1877" height="212" key="GridCell.Tab.0.bottom" timestamp="1591908986290">
+    <state width="1877" height="212" key="GridCell.Tab.0.bottom" timestamp="1591909433737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591908986290" />
-    <state width="1877" height="212" key="GridCell.Tab.0.center" timestamp="1591908986290">
+    <state width="1877" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591909433737" />
+    <state width="1877" height="212" key="GridCell.Tab.0.center" timestamp="1591909433737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591908986290" />
-    <state width="1877" height="212" key="GridCell.Tab.0.left" timestamp="1591908986290">
+    <state width="1877" height="212" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591909433737" />
+    <state width="1877" height="212" key="GridCell.Tab.0.left" timestamp="1591909433737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591908986290" />
-    <state width="1877" height="212" key="GridCell.Tab.0.right" timestamp="1591908986290">
+    <state width="1877" height="212" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591909433737" />
+    <state width="1877" height="212" key="GridCell.Tab.0.right" timestamp="1591909433737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591908986290" />
+    <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591909433737" />
     <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1591650636597">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

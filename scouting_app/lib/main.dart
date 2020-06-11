@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MaterialColor colorCustom = MaterialColor(0xFF880E4F, color);
+    MaterialColor colorCustom = MaterialColor(0xFF03CC00, color);
     return MaterialApp(
       title: 'Scouting Form',
       theme: ThemeData(

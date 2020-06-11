@@ -1,15 +1,18 @@
+import 'dart:io';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'home.dart';
+
 import 'form.dart' as FormBuilder;
+import 'home.dart';
 
 class FormReader extends StatefulWidget {
   final String stringForm;
 
   FormReader({Key key, this.stringForm}) : super(key: key);
+
   @override
   FormReaderState createState() {
     return FormReaderState();
@@ -92,6 +95,7 @@ class FormReaderState extends State<FormReader> {
           decoration: InputDecoration(labelText: tempWidget[1]),
           leadingInput: true,
           validators: [FormBuilderValidators.required()],
+          activeColor: Theme.of(context).primaryColor,
         ));
         print(FormBuilder.form);
       }
@@ -107,6 +111,9 @@ class FormReaderState extends State<FormReader> {
             attribute: tempWidget[1],
             options: createSetCheckbox(options),
             decoration: InputDecoration(labelText: tempWidget[1]),
+            activeColor: Theme
+                .of(context)
+                .primaryColor,
           ),
         );
         print(FormBuilder.form);
@@ -117,13 +124,17 @@ class FormReaderState extends State<FormReader> {
         FormBuilder.addWidget(new FormBuilderRadio(
           attribute: tempWidget[1],
           options: ["Yes", "No"]
-              .map((lang) => FormBuilderFieldOption(
-                    value: lang,
-                    child: Text('$lang'),
-                  ))
+              .map((lang) =>
+              FormBuilderFieldOption(
+                value: lang,
+                child: Text('$lang'),
+              ))
               .toList(growable: false),
           validators: [FormBuilderValidators.required()],
           decoration: InputDecoration(labelText: tempWidget[1]),
+          activeColor: Theme
+              .of(context)
+              .primaryColor,
         ));
         print("YEEEEET");
         print(FormBuilder.form);
@@ -173,6 +184,9 @@ class FormReaderState extends State<FormReader> {
           decoration: InputDecoration(
             labelText: tempWidget[1],
           ),
+          activeColor: Theme
+              .of(context)
+              .primaryColor,
         ));
       }
       //break

@@ -71,6 +71,7 @@ class StationSelectorState extends State<StationSelector> {
               children: <Widget>[
                 FormBuilderRadio(
                   decoration: InputDecoration(labelText: 'Station'),
+                  activeColor: Theme.of(context).primaryColor,
                   attribute: "station",
                   onChanged: _onChanged,
                   validators: [FormBuilderValidators.required()],
@@ -91,7 +92,9 @@ class StationSelectorState extends State<StationSelector> {
                   initialValue: initialStation(station),
                 ),
                 MaterialButton(
-                  color: Theme.of(context).accentColor,
+                  color: Theme
+                      .of(context)
+                      .primaryColor,
                   child: Text(
                     "Submit",
                     style: TextStyle(color: Colors.white),
