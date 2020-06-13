@@ -57,10 +57,16 @@ class MyPitFormPageState extends State<MyPitFormPage> {
                                       onPressed: () {
                                         if (_fbKey.currentState
                                             .saveAndValidate()) {
+                                          int teamNum = int.parse(widget.title
+                                              .substring(
+                                                  widget.title.indexOf(":") +
+                                                      2));
+                                          _fbKey.currentState.setAttributeValue(
+                                              "Team Number", teamNum);
                                           print(_fbKey.currentState.value);
-                                          FileUtils.saveToFile(
-                                              _fbKey.currentState.value
-                                                  .toString(),
+                                          print(_fbKey.currentState.toJson());
+                                          FileUtils.pitSaveToFileJSON(
+                                              _fbKey.currentState.toJson(),
                                               widget.title);
                                           Navigator.pop(context);
                                         } else {

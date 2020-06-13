@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="" />
+    <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/FileUtils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/FileUtils.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/pitForm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/pitForm.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/pitFormReader.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/pitFormReader.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +32,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/APK" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -122,22 +128,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591992473326" />
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom" timestamp="1591996460344">
+    <state width="1877" height="218" key="GridCell.Tab.0.bottom" timestamp="1592016376664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591996460344" />
-    <state width="1877" height="218" key="GridCell.Tab.0.center" timestamp="1591996460344">
+    <state width="1877" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592016376664" />
+    <state width="1877" height="218" key="GridCell.Tab.0.center" timestamp="1592016376664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591996460344" />
-    <state width="1877" height="218" key="GridCell.Tab.0.left" timestamp="1591996460343">
+    <state width="1877" height="218" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592016376664" />
+    <state width="1877" height="218" key="GridCell.Tab.0.left" timestamp="1592016376664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591996460343" />
-    <state width="1877" height="218" key="GridCell.Tab.0.right" timestamp="1591996460344">
+    <state width="1877" height="218" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592016376664" />
+    <state width="1877" height="218" key="GridCell.Tab.0.right" timestamp="1592016376664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591996460344" />
+    <state width="1877" height="218" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592016376664" />
     <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1591650636597">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

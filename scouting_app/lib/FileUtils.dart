@@ -26,9 +26,19 @@ class FileUtils {
 
   static Future<File> saveToFileJSON(String data, String title) async {
     final path = await getFilePath;
-    var directory = new Directory('$path/matchdata');
+    var directory = new Directory('$path/matchData');
     directory.create();
-    var file = new File('$path/matchdata/$title.json');
+    var file = new File('$path/matchData/$title.json');
+    print(file.path);
+    file.create();
+    return file.writeAsString(data);
+  }
+
+  static Future<File> pitSaveToFileJSON(String data, String title) async {
+    final path = await getFilePath;
+    var directory = new Directory('$path/pitData');
+    directory.create();
+    var file = new File('$path/pitData/$title.json');
     print(file.path);
     file.create();
     return file.writeAsString(data);

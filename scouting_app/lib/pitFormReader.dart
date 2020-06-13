@@ -82,6 +82,7 @@ class PitFormReaderState extends State<PitFormReader> {
           options.add(tempWidget[i]);
         }
         FormBuilder.addWidget(new FormBuilderRadio(
+          activeColor: Theme.of(context).primaryColor,
           attribute: tempWidget[1],
           options: options
               .map((lang) => FormBuilderFieldOption(
@@ -107,6 +108,7 @@ class PitFormReaderState extends State<PitFormReader> {
             attribute: tempWidget[1],
             options: createSetCheckbox(options),
             decoration: InputDecoration(labelText: tempWidget[1]),
+            activeColor: Theme.of(context).primaryColor,
           ),
         );
         print(FormBuilder.form);
@@ -124,8 +126,8 @@ class PitFormReaderState extends State<PitFormReader> {
               .toList(growable: false),
           validators: [FormBuilderValidators.required()],
           decoration: InputDecoration(labelText: tempWidget[1]),
+          activeColor: Theme.of(context).primaryColor,
         ));
-        print("YEEEEET");
         print(FormBuilder.form);
       }
       //break
@@ -173,6 +175,7 @@ class PitFormReaderState extends State<PitFormReader> {
           decoration: InputDecoration(
             labelText: tempWidget[1],
           ),
+          activeColor: Theme.of(context).primaryColor,
         ));
       }
       //break
