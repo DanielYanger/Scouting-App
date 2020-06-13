@@ -65,9 +65,12 @@ class MyPitFormPageState extends State<MyPitFormPage> {
                                               "Team Number", teamNum);
                                           print(_fbKey.currentState.value);
                                           print(_fbKey.currentState.toJson());
-                                          FileUtils.pitSaveToFileJSON(
-                                              _fbKey.currentState.toJson(),
-                                              widget.title);
+                                          FileUtils.readAndWriteFromFilePit(
+                                                  _fbKey.currentState.toJson())
+                                              .then((data) {
+                                            String test = data;
+                                            print(test);
+                                          });
                                           Navigator.pop(context);
                                         } else {
                                           print("Warning: Submission Failed");

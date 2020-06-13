@@ -63,22 +63,21 @@ class MyFormPageState extends State<MyFormPage> {
                                                           .indexOf("Match ") +
                                                       6,
                                                   widget.title.indexOf(":")));
-                                          print(matchNum);
                                           int teamNum = int.parse(widget.title
                                               .substring(
                                                   widget.title.indexOf(": ") +
                                                       2));
-                                          print(teamNum);
                                           _fbKey.currentState.setAttributeValue(
                                               "Team Number", teamNum);
                                           _fbKey.currentState.setAttributeValue(
                                               "Match Number", matchNum);
-                                          print(_fbKey.currentState.value);
-                                          print(_fbKey.currentState.toJson());
-                                          FileUtils.saveToFileJSON(
-                                              _fbKey.currentState.toJson(),
-                                              widget.title);
 
+                                          FileUtils.readAndWriteFromFile(
+                                                  _fbKey.currentState.toJson())
+                                              .then((data) {
+                                            String test = data;
+                                            print(test);
+                                          });
                                           Navigator.pop(context);
                                         } else {
                                           print("Warning: Submission Failed");
@@ -131,6 +130,30 @@ class MyFormPageState extends State<MyFormPage> {
         ));
   }
 }
+
+/*
+ int matchNum = int.parse(widget.title
+                                              .substring(
+                                                  widget.title
+                                                          .indexOf("Match ") +
+                                                      6,
+                                                  widget.title.indexOf(":")));
+                                          print(matchNum);
+                                          int teamNum = int.parse(widget.title
+                                              .substring(
+                                                  widget.title.indexOf(": ") +
+                                                      2));
+                                          print(teamNum);
+                                          _fbKey.currentState.setAttributeValue(
+                                              "Team Number", teamNum);
+                                          _fbKey.currentState.setAttributeValue(
+                                              "Match Number", matchNum);
+                                          print(_fbKey.currentState.value);
+                                          print(_fbKey.currentState.toJson());
+                                          FileUtils.saveToFileJSON(
+                                              _fbKey.currentState.toJson(),
+                                              widget.title);
+ */
 
 //Padding(
 //        padding: EdgeInsets.all(10),

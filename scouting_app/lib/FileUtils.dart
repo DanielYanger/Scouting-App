@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
@@ -11,56 +12,62 @@ class FileUtils {
   static Future<File> get getFile async {
     final path = await getFilePath;
     print(path);
-    return File('$path/myfile.txt');
+    return File('$path/MasterData.json');
   }
 
-  static Future<File> saveToFile(String data, String title) async {
+  static Future<File> get getFilePit async {
     final path = await getFilePath;
-    var directory = new Directory('$path/matchdata');
-    directory.create();
-    var file = new File('$path/matchdata/$title.txt');
-    print(file.path);
-    file.create();
-    return file.writeAsString(data);
+    print(path);
+    return File('$path/PitMasterData.json');
   }
 
   static Future<File> saveToFileJSON(String data, String title) async {
     final path = await getFilePath;
-    var directory = new Directory('$path/matchData');
-    directory.create();
-    var file = new File('$path/matchData/$title.json');
+    var file = new File('$path/$title.json');
     print(file.path);
     file.create();
     return file.writeAsString(data);
   }
 
-  static Future<File> pitSaveToFileJSON(String data, String title) async {
-    final path = await getFilePath;
-    var directory = new Directory('$path/pitData');
-    directory.create();
-    var file = new File('$path/pitData/$title.json');
-    print(file.path);
-    file.create();
-    return file.writeAsString(data);
-  }
-
-  static Future<String> createFile(String fileName) async {
-    final path = await getFilePath;
-    var directory = new Directory('$path/matchdata');
-    directory.create();
-    var file = new File('$path/matchdata/$fileName.txt');
-    print(file.path);
-    file.create();
-    return "Success";
-  }
-
-  static Future<String> readFromFile() async {
+  static Future<String> readAndWriteFromFile(String data) async {
     try {
       final file = await getFile;
       String fileContents = await file.readAsString();
-      return fileContents;
+      print(data);
+      String fileContents2 =
+          fileContents.substring(0, fileContents.lastIndexOf("}") + 1) +
+              "," +
+              data +
+              "]";
+      //final jsonResponse = json.decode(fileContents);
+      file.writeAsString(fileContents2);
+      return fileContents2;
     } catch (e) {
-      return "";
+      print("error");
+      data = "[" + data + "]";
+      saveToFileJSON(data, "MasterData");
+      return (data);
+    }
+  }
+
+  static Future<String> readAndWriteFromFilePit(String data) async {
+    try {
+      final file = await getFilePit;
+      String fileContents = await file.readAsString();
+      print(data);
+      String fileContents2 =
+          fileContents.substring(0, fileContents.lastIndexOf("}") + 1) +
+              "," +
+              data +
+              "]";
+      //final jsonResponse = json.decode(fileContents);
+      file.writeAsString(fileContents2);
+      return fileContents2;
+    } catch (e) {
+      print("error");
+      data = "[" + data + "]";
+      saveToFileJSON(data, "PitMasterData");
+      return (data);
     }
   }
 }
