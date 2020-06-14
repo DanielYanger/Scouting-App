@@ -18,10 +18,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class MyHomePageState extends State<MyHomePage> {
-  Future<String> _calculation = FileUtils.readSchedule();
-  var station;
-  var items =
-      selector.modifiedSchedule(selector.getStation(), importer.fullSchedule());
+  Future<String> _schedule = FileUtils.readSchedule();
   var isPit = selector.isPit();
 
   @override
@@ -50,11 +47,11 @@ class MyHomePageState extends State<MyHomePage> {
             itemBuilder: (context, index) {
               return FutureBuilder<String>(
                 future:
-                    _calculation, // a previously-obtained Future<String> or null
+                    _schedule, // a previously-obtained Future<String> or null
                 builder:
                     (BuildContext context, AsyncSnapshot<String> snapshot) {
                   List<Widget> children = [];
-                  if (snapshot.hasData) {
+                  if (snapshot.hasData && snapshot.data.toString().length > 5) {
                     String fullSchedule = snapshot.data.toString();
                     int station = selector.getStation();
                     List<List<String>> tempMatch =
@@ -79,18 +76,6 @@ class MyHomePageState extends State<MyHomePage> {
                         ),
                       );
                     }
-                  } else if (snapshot.hasError) {
-                    children = <Widget>[
-                      Icon(
-                        Icons.error_outline,
-                        color: Colors.red,
-                        size: 60,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 16),
-                        child: Text('Error: ${snapshot.error}'),
-                      )
-                    ];
                   } else {
                     children = <Widget>[
                       Card(
