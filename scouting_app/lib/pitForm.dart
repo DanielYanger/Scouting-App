@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 import 'FileUtils.dart';
+import 'pitFormReader.dart' as reader;
 
 class MyPitFormPage extends StatefulWidget {
   final String title;
@@ -21,90 +22,101 @@ void addWidget(Widget item) {
   form.add(item);
 }
 
+List<Widget> getForm() {
+  return form;
+}
+
 class MyPitFormPageState extends State<MyPitFormPage> {
   final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();
+  Future<String> _form = FileUtils.readPitForm();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: FormBuilder(
-              key: _fbKey,
-              readOnly: false,
-              child: ListView.builder(
-                itemCount:
-                    form != null && form.isNotEmpty ? form.length + 1 : 1,
-                itemBuilder: form != null && form.isNotEmpty
-                    ? (context, index) {
-                        //Import Form
-                        return (index < form.length)
-                            ? Column(
-                                children: <Widget>[form[index]],
-                              )
-                            : Row(
-                                children: <Widget>[
-                                  Expanded(
-                                    child: MaterialButton(
-                                      color: Theme.of(context).accentColor,
-                                      child: Text(
-                                        "Submit",
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        if (_fbKey.currentState
-                                            .saveAndValidate()) {
-                                          int teamNum = int.parse(widget.title
-                                              .substring(
-                                                  widget.title.indexOf(":") +
-                                                      2));
-                                          _fbKey.currentState.setAttributeValue(
-                                              "Team Number", teamNum);
-                                          print(_fbKey.currentState.value);
-                                          print(_fbKey.currentState.toJson());
-                                          FileUtils.readAndWriteFromFilePit(
-                                                  _fbKey.currentState.toJson())
-                                              .then((data) {
-                                            String test = data;
-                                            print(test);
-                                          });
-                                          Navigator.pop(context);
-                                        } else {
-                                          print("Warning: Submission Failed");
-                                        }
-                                      },
-                                    ),
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Padding(
+        padding:
+            const EdgeInsets.only(left: 4.0, right: 4.0, bottom: 1.0, top: 0.0),
+        child: FormBuilder(
+          key: _fbKey,
+          readOnly: false,
+          child: ListView.builder(
+            itemCount: 1,
+            itemBuilder: (context, index) {
+              return FutureBuilder<String>(
+                  future: _form,
+                  builder:
+                      (BuildContext context, AsyncSnapshot<String> snapshot) {
+                    List<Widget> children = [];
+                    if (snapshot.hasData &&
+                        snapshot.data.toString().length > 5) {
+                      String fullForm = snapshot.data.toString();
+                      children = reader.formCreator(fullForm, children);
+                      children.add(
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: MaterialButton(
+                                  color: Theme.of(context).primaryColor,
+                                  child: Text(
+                                    "Submit",
+                                    style: TextStyle(color: Colors.white),
                                   ),
-                                  SizedBox(
-                                    width: 20,
+                                  onPressed: () {
+                                    if (_fbKey.currentState.saveAndValidate()) {
+                                      int teamNum = int.parse(widget.title
+                                          .substring(
+                                              widget.title.indexOf(":") + 2));
+                                      _fbKey.currentState.setAttributeValue(
+                                          "Team Number", teamNum);
+                                      print(_fbKey.currentState.value);
+                                      print(_fbKey.currentState.toJson());
+                                      FileUtils.readAndWriteFromFilePit(
+                                              _fbKey.currentState.toJson())
+                                          .then((data) {
+                                        String test = data;
+                                        print(test);
+                                      });
+                                      Navigator.pop(context);
+                                    } else {
+                                      print("Warning: Submission Failed");
+                                    }
+                                  },
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Expanded(
+                                child: MaterialButton(
+                                  color: Theme.of(context).primaryColor,
+                                  child: Text(
+                                    "Reset",
+                                    style: TextStyle(color: Colors.white),
                                   ),
-                                  Expanded(
-                                    child: MaterialButton(
-                                      color: Theme.of(context).accentColor,
-                                      child: Text(
-                                        "Reset",
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      onPressed: () {
-                                        _fbKey.currentState.reset();
-                                      },
-                                    ),
-                                  ),
-                                ],
-                              );
-                      }
-                    : (context, index) {
-                        return Card(
+                                  onPressed: () {
+                                    _fbKey.currentState.reset();
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                      print(children);
+                    } else {
+                      children = <Widget>[
+                        Card(
                           child: ListTile(
-                            title: Center(child: Text("No Pit Form Imported!")),
-                            subtitle: Center(
-                                child: Text(
-                              "Please import a pit form in the settings.",
+                            title: Center(child: Text("No Form Imported!")),
+                            subtitle: Text(
+                              "Please import a form in the settings.",
                               textAlign: TextAlign.center,
-                            )),
+                            ),
                             isThreeLine: true,
                             leading: Icon(
                               Icons.warning,
@@ -117,10 +129,22 @@ class MyPitFormPageState extends State<MyPitFormPage> {
                               color: Colors.red,
                             ),
                           ),
-                        );
-                      },
-              )),
-        ));
+                        )
+                      ];
+                    }
+                    return Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: children,
+                      ),
+                    );
+                  });
+            },
+          ),
+        ),
+      ),
+    );
   }
 }
 

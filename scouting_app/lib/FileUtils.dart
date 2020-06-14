@@ -66,6 +66,25 @@ class FileUtils {
     }
   }
 
+  static Future<File> savePitForm(String data) async {
+    final path = await getFilePath;
+    var file = new File('$path/PitForm.txt');
+    file.create();
+    return file.writeAsString(data);
+  }
+
+  static Future<String> readPitForm() async {
+    try {
+      final path = await getFilePath;
+      var file = File('$path/PitForm.txt');
+      String fileContents = await file.readAsString();
+      print(fileContents);
+      return fileContents;
+    } catch (Exception) {
+      return "";
+    }
+  }
+
   static Future<String> readAndWriteFromFile(String data) async {
     try {
       final file = await getFile;
