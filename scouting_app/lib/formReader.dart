@@ -48,7 +48,7 @@ List<DropdownMenuItem<dynamic>> createSetDropdown(List<dynamic> list) {
   return result;
 }
 
-formCreator(String stringForm, List<Widget> form) {
+formCreator(String stringForm, List<Widget> form, BuildContext context) {
   form.clear();
   List<String> separatedForm = stringForm.split(";");
   separatedForm.removeLast();
@@ -76,6 +76,7 @@ formCreator(String stringForm, List<Widget> form) {
         decoration: InputDecoration(labelText: tempWidget[1]),
         leadingInput: true,
         validators: [FormBuilderValidators.required()],
+        activeColor: Theme.of(context).primaryColor,
       ));
     }
     //break
@@ -87,6 +88,9 @@ formCreator(String stringForm, List<Widget> form) {
       }
       form.add(
         new FormBuilderCheckboxList(
+          activeColor: Theme
+              .of(context)
+              .primaryColor,
           attribute: tempWidget[1],
           options: createSetCheckbox(options),
           decoration: InputDecoration(labelText: tempWidget[1]),
@@ -99,13 +103,17 @@ formCreator(String stringForm, List<Widget> form) {
       form.add(new FormBuilderRadio(
         attribute: tempWidget[1],
         options: ["Yes", "No"]
-            .map((lang) => FormBuilderFieldOption(
-                  value: lang,
-                  child: Text('$lang'),
-                ))
+            .map((lang) =>
+            FormBuilderFieldOption(
+              value: lang,
+              child: Text('$lang'),
+            ))
             .toList(growable: false),
         validators: [FormBuilderValidators.required()],
         decoration: InputDecoration(labelText: tempWidget[1]),
+        activeColor: Theme
+            .of(context)
+            .primaryColor,
       ));
     }
     //break
@@ -222,7 +230,8 @@ class FormReaderState extends State<FormReader> {
                           FileUtils.saveForm(data);
                           stringForm = data;
                           print("File Picked");
-                          formCreator(stringForm, FormBuilder.getForm());
+                          formCreator(
+                              stringForm, FormBuilder.getForm(), context);
                         });
                       },
                       child: new Text("Choose Match Form"),

@@ -53,7 +53,8 @@ class MyFormPageState extends State<MyFormPage> {
                     if (snapshot.hasData &&
                         snapshot.data.toString().length > 5) {
                       String fullForm = snapshot.data.toString();
-                      children = reader.formCreator(fullForm, children);
+                      children =
+                          reader.formCreator(fullForm, children, context);
                       children.add(
                         Padding(
                           padding: const EdgeInsets.all(4.0),
