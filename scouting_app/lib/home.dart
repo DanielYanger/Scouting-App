@@ -4,7 +4,6 @@ import 'package:scoutingapp/FileUtils.dart';
 import 'package:scoutingapp/form.dart';
 
 import 'form.dart';
-import 'importSchedule.dart' as importer;
 import 'pitForm.dart';
 import 'scouting_icons_icons.dart';
 import 'settings.dart';
