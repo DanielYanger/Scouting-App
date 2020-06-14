@@ -88,9 +88,7 @@ formCreator(String stringForm, List<Widget> form, BuildContext context) {
       }
       form.add(
         new FormBuilderCheckboxList(
-          activeColor: Theme
-              .of(context)
-              .primaryColor,
+          activeColor: Theme.of(context).primaryColor,
           attribute: tempWidget[1],
           options: createSetCheckbox(options),
           decoration: InputDecoration(labelText: tempWidget[1]),
@@ -103,17 +101,14 @@ formCreator(String stringForm, List<Widget> form, BuildContext context) {
       form.add(new FormBuilderRadio(
         attribute: tempWidget[1],
         options: ["Yes", "No"]
-            .map((lang) =>
-            FormBuilderFieldOption(
-              value: lang,
-              child: Text('$lang'),
-            ))
+            .map((lang) => FormBuilderFieldOption(
+                  value: lang,
+                  child: Text('$lang'),
+                ))
             .toList(growable: false),
         validators: [FormBuilderValidators.required()],
         decoration: InputDecoration(labelText: tempWidget[1]),
-        activeColor: Theme
-            .of(context)
-            .primaryColor,
+        activeColor: Theme.of(context).primaryColor,
       ));
     }
     //break
