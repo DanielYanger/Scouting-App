@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:scoutingapp/form.dart';
-import 'scouting_icons_icons.dart';
 
 import 'form.dart';
+import 'pitForm.dart';
+import 'scouting_icons_icons.dart';
 import 'settings.dart';
 import 'stationSelector.dart' as selector;
-import 'pitForm.dart';
 
 class MyHomePage extends StatefulWidget {
   @override

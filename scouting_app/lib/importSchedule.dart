@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
+import 'FileUtils.dart';
 import 'home.dart';
 
 class ImportScreen extends StatefulWidget {
@@ -10,6 +11,7 @@ class ImportScreen extends StatefulWidget {
   ImportScreenState createState() => new ImportScreenState();
 }
 
+//define this as from the file
 String schedule = "";
 
 List<List<String>> getSchedule(int station) {
@@ -54,6 +56,7 @@ class ImportScreenState extends State<ImportScreen> {
   static Future<String> readFile(Future<File> file) async {
     final schedule = await file;
     print("test");
+
     return schedule.readAsString();
   }
 
@@ -76,6 +79,7 @@ class ImportScreenState extends State<ImportScreen> {
                       onPressed: () {
                         file = pickFile;
                         readFile(file).then((data) {
+                          FileUtils.saveSchedule(data);
                           schedule = data;
                           print("File Picked");
                           print(schedule);
