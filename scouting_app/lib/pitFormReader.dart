@@ -49,7 +49,8 @@ List<DropdownMenuItem<dynamic>> createSetDropdown(List<dynamic> list) {
   return result;
 }
 
-List<Widget> formCreator(String stringForm, List<Widget> form) {
+List<Widget> formCreator(
+    String stringForm, List<Widget> form, BuildContext context) {
   form.clear();
   List<String> separatedForm = stringForm.split(";");
   separatedForm.removeLast();
@@ -69,12 +70,16 @@ List<Widget> formCreator(String stringForm, List<Widget> form) {
         options.add(tempWidget[i]);
       }
       form.add(new FormBuilderRadio(
+        activeColor: Theme
+            .of(context)
+            .primaryColor,
         attribute: tempWidget[1],
         options: options
-            .map((lang) => FormBuilderFieldOption(
-                  value: lang,
-                  child: Text('$lang'),
-                ))
+            .map((lang) =>
+            FormBuilderFieldOption(
+              value: lang,
+              child: Text('$lang'),
+            ))
             .toList(growable: false),
         decoration: InputDecoration(labelText: tempWidget[1]),
         leadingInput: true,
@@ -90,6 +95,9 @@ List<Widget> formCreator(String stringForm, List<Widget> form) {
       }
       form.add(
         new FormBuilderCheckboxList(
+          activeColor: Theme
+              .of(context)
+              .primaryColor,
           attribute: tempWidget[1],
           options: createSetCheckbox(options),
           decoration: InputDecoration(labelText: tempWidget[1]),
@@ -100,12 +108,16 @@ List<Widget> formCreator(String stringForm, List<Widget> form) {
 
     else if (tempWidget[0] == "FormBuilderBoolean") {
       form.add(new FormBuilderRadio(
+        activeColor: Theme
+            .of(context)
+            .primaryColor,
         attribute: tempWidget[1],
         options: ["Yes", "No"]
-            .map((lang) => FormBuilderFieldOption(
-                  value: lang,
-                  child: Text('$lang'),
-                ))
+            .map((lang) =>
+            FormBuilderFieldOption(
+              value: lang,
+              child: Text('$lang'),
+            ))
             .toList(growable: false),
         validators: [FormBuilderValidators.required()],
         decoration: InputDecoration(labelText: tempWidget[1]),
@@ -225,7 +237,8 @@ class PitFormReaderState extends State<PitFormReader> {
                           FileUtils.savePitForm(data);
                           stringForm = data;
                           print("File Picked");
-                          formCreator(stringForm, FormBuilder.getForm());
+                          formCreator(
+                              stringForm, FormBuilder.getForm(), context);
                         });
                       },
                       child: new Text("Choose Pit Scouting Form"),
