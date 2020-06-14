@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/pitForm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/pitForm.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scouting_app/lib/pitFormReader.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/pitFormReader.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592168497161</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Color changes for Pit Form">
+      <created>1592168600394</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1592168600394</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -168,15 +174,16 @@
     <MESSAGE value="Future Builder for Pit Form" />
     <MESSAGE value="Clean up" />
     <MESSAGE value="Color changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Color changes" />
+    <MESSAGE value="Color changes for Pit Form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Color changes for Pit Form" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1592168494883">
+    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1592168598956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592168494883" />
+    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592168598956" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592092187004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

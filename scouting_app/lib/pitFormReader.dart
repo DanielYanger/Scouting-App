@@ -70,16 +70,13 @@ List<Widget> formCreator(
         options.add(tempWidget[i]);
       }
       form.add(new FormBuilderRadio(
-        activeColor: Theme
-            .of(context)
-            .primaryColor,
+        activeColor: Theme.of(context).primaryColor,
         attribute: tempWidget[1],
         options: options
-            .map((lang) =>
-            FormBuilderFieldOption(
-              value: lang,
-              child: Text('$lang'),
-            ))
+            .map((lang) => FormBuilderFieldOption(
+                  value: lang,
+                  child: Text('$lang'),
+                ))
             .toList(growable: false),
         decoration: InputDecoration(labelText: tempWidget[1]),
         leadingInput: true,
@@ -95,9 +92,7 @@ List<Widget> formCreator(
       }
       form.add(
         new FormBuilderCheckboxList(
-          activeColor: Theme
-              .of(context)
-              .primaryColor,
+          activeColor: Theme.of(context).primaryColor,
           attribute: tempWidget[1],
           options: createSetCheckbox(options),
           decoration: InputDecoration(labelText: tempWidget[1]),
@@ -108,16 +103,13 @@ List<Widget> formCreator(
 
     else if (tempWidget[0] == "FormBuilderBoolean") {
       form.add(new FormBuilderRadio(
-        activeColor: Theme
-            .of(context)
-            .primaryColor,
+        activeColor: Theme.of(context).primaryColor,
         attribute: tempWidget[1],
         options: ["Yes", "No"]
-            .map((lang) =>
-            FormBuilderFieldOption(
-              value: lang,
-              child: Text('$lang'),
-            ))
+            .map((lang) => FormBuilderFieldOption(
+                  value: lang,
+                  child: Text('$lang'),
+                ))
             .toList(growable: false),
         validators: [FormBuilderValidators.required()],
         decoration: InputDecoration(labelText: tempWidget[1]),
