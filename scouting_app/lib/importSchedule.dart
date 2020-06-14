@@ -14,11 +14,15 @@ class ImportScreen extends StatefulWidget {
 //define this as from the file
 String schedule = "";
 
-List<List<String>> getSchedule(int station) {
+String fullSchedule() {
+  return schedule;
+}
+
+List<List<String>> getSchedule(int station, String schedules) {
   List<List<String>> matches = [];
   List<int> teams = [];
-  if (schedule.length != 0) {
-    List<String> holder = schedule.split(";");
+  if (schedules.length != 0) {
+    List<String> holder = schedules.split(";");
     holder.removeLast();
     if (station != 6) {
       for (String i in holder) {

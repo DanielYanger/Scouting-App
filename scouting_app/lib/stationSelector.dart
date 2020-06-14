@@ -11,10 +11,14 @@ class StationSelector extends StatefulWidget {
 
 var station = 0;
 
-List<List<String>> modifiedSchedule() {
+int getStation() {
+  return station;
+}
+
+List<List<String>> modifiedSchedule(int state, String schedule) {
   //stations go from 0-5
   List<List<String>> modifiedMatches = [];
-  List<List<String>> matches = importSchedule.getSchedule(station);
+  List<List<String>> matches = importSchedule.getSchedule(station, schedule);
   if (station == 6) {
     modifiedMatches = matches;
   } else {
@@ -61,7 +65,7 @@ class StationSelectorState extends State<StationSelector> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Import Schedule")),
+      appBar: AppBar(title: Text("Select Station")),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
