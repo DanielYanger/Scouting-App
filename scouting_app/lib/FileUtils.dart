@@ -47,21 +47,41 @@ class FileUtils {
     }
   }
 
+  static Future<File> saveForm(String data) async {
+    final path = await getFilePath;
+    var file = new File('$path/form.txt');
+    file.create();
+    return file.writeAsString(data);
+  }
+
+  static Future<String> readForm() async {
+    try {
+      final path = await getFilePath;
+      var file = File('$path/form.txt');
+      String fileContents = await file.readAsString();
+      print(fileContents);
+      return fileContents;
+    } catch (Exception) {
+      return "";
+    }
+  }
+
   static Future<String> readAndWriteFromFile(String data) async {
     try {
       final file = await getFile;
       String fileContents = await file.readAsString();
       data = data.replaceAll("[]", "[\"\"]");
+      print(data);
       String fileContents2 =
           fileContents.substring(0, fileContents.lastIndexOf("}") + 1) +
               "," +
               data +
               "]";
-      //final jsonResponse = json.decode(fileContents);
       file.writeAsString(fileContents2);
       return fileContents2;
     } catch (e) {
       print("error");
+      data = data.replaceAll("[]", "[\"\"]");
       data = "[" + data + "]";
       saveToFileJSON(data, "MasterData");
       return (data);
