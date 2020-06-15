@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 import 'FileUtils.dart';
@@ -51,19 +50,6 @@ List<List<String>> getSchedule(int station, String schedules) {
 class ImportScreenState extends State<ImportScreen> {
   Future<File> file;
 
-  static Future<File> get pickFile async {
-    print('debug');
-    Future<File> file = FilePicker.getFile(type: FileType.any);
-    return file;
-  }
-
-  static Future<String> readFile(Future<File> file) async {
-    final schedule = await file;
-    print("test");
-
-    return schedule.readAsString();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,8 +67,8 @@ class ImportScreenState extends State<ImportScreen> {
                   children: <Widget>[
                     new RaisedButton(
                       onPressed: () {
-                        file = pickFile;
-                        readFile(file).then((data) {
+                        file = FileUtils.pickFile;
+                        FileUtils.readFile(file).then((data) {
                           FileUtils.saveSchedule(data);
                           schedule = data;
                           print("File Picked");

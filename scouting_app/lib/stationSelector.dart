@@ -26,17 +26,14 @@ List<List<String>> modifiedSchedule(int state, String schedule) {
       modifiedMatches.add(matches[i]);
     }
   }
-
   return modifiedMatches;
 }
 
 bool isPit() {
   //stations go from 0-5
   if (station == 6) {
-    print("true");
     return true;
   }
-  print("false");
   return false;
 }
 
