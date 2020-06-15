@@ -59,19 +59,22 @@ class MyHomePageState extends State<MyHomePage> {
                       children.add(
                         Card(
                           child: ListTile(
-                              title: Text('${i[0]}'),
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: !isPit
-                                          ? (context) => MyFormPage(
-                                              title: '${i[0]}: ${i[1]}')
-                                          : (context) => MyPitFormPage(
-                                              title: '${i[1]}: ${i[0]}')),
-                                );
-                              },
-                              subtitle: Text("${i[1]}")),
+                            title: Text('${i[0]}'),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: !isPit
+                                        ? (context) => MyFormPage(
+                                            title: '${i[0]}: ${i[1]}')
+                                        : (context) => MyPitFormPage(
+                                            title: '${i[1]}: ${i[0]}')),
+                              );
+                            },
+                            subtitle: Text("${i[1]}"),
+                          ),
+                          borderOnForeground: true,
+                          //shadowColor: Colors.transparent,
                         ),
                       );
                     }
