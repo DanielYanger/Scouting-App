@@ -115,7 +115,7 @@ class MyFormPageState extends State<MyFormPage> {
                         ),
                       );
                       print(children);
-                    } else {
+                    } else if (snapshot.hasData && snapshot.data.length <= 5) {
                       children = <Widget>[
                         Card(
                           child: ListTile(
@@ -136,6 +136,23 @@ class MyFormPageState extends State<MyFormPage> {
                               color: Colors.red,
                             ),
                           ),
+                        )
+                      ];
+                    } else {
+                      children = <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SizedBox(
+                            child: CircularProgressIndicator(
+                              value: null,
+                            ),
+                            width: 60,
+                            height: 60,
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 16),
+                          child: Text("Fetching Form"),
                         )
                       ];
                     }
