@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:file_picker/file_picker.dart';
 import 'package:path_provider/path_provider.dart';
 
 class FileUtils {
@@ -18,6 +19,17 @@ class FileUtils {
     final path = await getFilePath;
     print(path);
     return File('$path/PitMasterData.json');
+  }
+
+  static Future<File> get pickFile async {
+    Future<File> file = FilePicker.getFile(type: FileType.any);
+    return file;
+  }
+
+  static Future<String> readFile(Future<File> file) async {
+    final schedule = await file;
+    print("test");
+    return schedule.readAsString();
   }
 
   static Future<File> saveToFileJSON(String data, String title) async {

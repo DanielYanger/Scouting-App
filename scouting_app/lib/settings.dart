@@ -92,7 +92,6 @@ class MySettingPageState extends State<MySettingPage> {
             child: ListTile(
               title: Text("About the App"),
               subtitle: Text(""),
-              isThreeLine: true,
               leading: Icon(
                 Icons.info,
                 size: 50,

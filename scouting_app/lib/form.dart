@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:scoutingapp/formCreator.dart';
 
 import 'FileUtils.dart';
-import 'formReader.dart' as reader;
 
 class MyFormPage extends StatefulWidget {
   final String title;
@@ -54,7 +54,7 @@ class MyFormPageState extends State<MyFormPage> {
                         snapshot.data.toString().length > 5) {
                       String fullForm = snapshot.data.toString();
                       children =
-                          reader.formCreator(fullForm, children, context);
+                          FormCreator.formCreator(fullForm, children, context);
                       children.add(
                         Padding(
                           padding: const EdgeInsets.all(4.0),
