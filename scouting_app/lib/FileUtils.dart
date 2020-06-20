@@ -66,6 +66,27 @@ class FileUtils {
     return file.writeAsString(data);
   }
 
+  // ignore: missing_return
+  static Future<File> deleteForm() async {
+    final path = await getFilePath;
+    var file = new File('$path/form.txt');
+    file.delete();
+  }
+
+  // ignore: missing_return
+  static Future<File> deleteSchedule() async {
+    final path = await getFilePath;
+    var file = new File('$path/schedule.txt');
+    file.delete();
+  }
+
+  // ignore: missing_return
+  static Future<File> deletePitForm() async {
+    final path = await getFilePath;
+    var file = new File('$path/PitForm.txt');
+    file.delete();
+  }
+
   static Future<String> readForm() async {
     try {
       final path = await getFilePath;

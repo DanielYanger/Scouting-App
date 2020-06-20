@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:scoutingapp/FileUtils.dart';
 import 'package:scoutingapp/scouting_icons_icons.dart';
 
 import 'formReader.dart';
+import 'home.dart';
 import 'importSchedule.dart';
 import 'pitFormReader.dart';
 import 'stationSelector.dart';
@@ -85,6 +87,47 @@ class MySettingPageState extends State<MySettingPage> {
                   context,
                   MaterialPageRoute(builder: (context) => ImportScreen()),
                 );
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: Icon(
+                Icons.delete,
+                size: 50,
+              ),
+              title: Text("Clear Data"),
+              subtitle: Text("Clear all data"),
+              onTap: () async {
+                return await showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text("Confirm"),
+                        content: const Text(
+                            "Are you sure you wish to delete all data?"),
+                        actions: <Widget>[
+                          FlatButton(
+                            child: Text("CONFIRM"),
+                            onPressed: () {
+                              FileUtils.deleteSchedule();
+                              FileUtils.deletePitForm();
+                              FileUtils.deleteForm();
+                              Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyHomePage()),
+                                (Route<dynamic> route) => false,
+                              );
+                            },
+                          ),
+                          FlatButton(
+                            child: Text("CANCEL"),
+                            onPressed: () => Navigator.of(context).pop(),
+                          )
+                        ],
+                      );
+                    });
               },
             ),
           ),
