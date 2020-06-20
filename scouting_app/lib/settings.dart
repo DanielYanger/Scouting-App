@@ -96,6 +96,47 @@ class MySettingPageState extends State<MySettingPage> {
                 Icons.delete,
                 size: 50,
               ),
+              title: Text("Clear Forms"),
+              subtitle: Text("Clear all forms and schedule"),
+              onTap: () async {
+                return await showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text("Confirm"),
+                        content: const Text(
+                            "Are you sure you wish to clear all forms and schedule?"),
+                        actions: <Widget>[
+                          FlatButton(
+                            child: Text("CONFIRM"),
+                            onPressed: () {
+                              FileUtils.deleteSchedule();
+                              FileUtils.deletePitForm();
+                              FileUtils.deleteForm();
+                              Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyHomePage()),
+                                (Route<dynamic> route) => false,
+                              );
+                            },
+                          ),
+                          FlatButton(
+                            child: Text("CANCEL"),
+                            onPressed: () => Navigator.of(context).pop(),
+                          )
+                        ],
+                      );
+                    });
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: Icon(
+                Icons.clear,
+                size: 50,
+              ),
               title: Text("Clear Data"),
               subtitle: Text("Clear all data"),
               onTap: () async {
@@ -105,14 +146,12 @@ class MySettingPageState extends State<MySettingPage> {
                       return AlertDialog(
                         title: const Text("Confirm"),
                         content: const Text(
-                            "Are you sure you wish to delete all data?"),
+                            "Are you sure you wish to clear ALL data?"),
                         actions: <Widget>[
                           FlatButton(
                             child: Text("CONFIRM"),
                             onPressed: () {
-                              FileUtils.deleteSchedule();
-                              FileUtils.deletePitForm();
-                              FileUtils.deleteForm();
+                              FileUtils.deleteData();
                               Navigator.pushAndRemoveUntil(
                                 context,
                                 MaterialPageRoute(

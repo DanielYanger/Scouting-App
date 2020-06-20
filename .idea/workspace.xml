@@ -180,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592254062016</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Delete All">
+      <created>1592691488185</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1592691488185</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -215,7 +222,8 @@
     <MESSAGE value="Optimizing Methods" />
     <MESSAGE value="Design Updates" />
     <MESSAGE value="Loading Wheel Implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Loading Wheel Implementation" />
+    <MESSAGE value="Delete All" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete All" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -224,10 +232,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1592194067570" />
-    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1592254059323">
+    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1592691485973">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592254059323" />
+    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592691485973" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592690975191">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

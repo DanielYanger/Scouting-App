@@ -87,6 +87,15 @@ class FileUtils {
     file.delete();
   }
 
+  // ignore: missing_return
+  static Future<File> deleteData() async {
+    final path = await getFilePath;
+    var file = new File('$path/MasterData.txt');
+    file.delete();
+    var pitFile = new File('$path/PitMasterData.txt');
+    pitFile.delete();
+  }
+
   static Future<String> readForm() async {
     try {
       final path = await getFilePath;
