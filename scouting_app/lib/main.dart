@@ -27,9 +27,7 @@ class MyApp extends StatelessWidget {
       title: 'Scouting Form',
       theme: ThemeData(
         primarySwatch: colorCustom,
-        // brightness: Brightness.dark,
         inputDecorationTheme: InputDecorationTheme(
-          // labelStyle: TextStyle(color: Colors.purple),
           border: OutlineInputBorder(
             gapPadding: 10,
           ),

@@ -10,7 +10,6 @@ class ImportScreen extends StatefulWidget {
   ImportScreenState createState() => new ImportScreenState();
 }
 
-//define this as from the file
 String schedule = "";
 
 String fullSchedule() {
