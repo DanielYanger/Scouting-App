@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:scoutingapp/adminPanel.dart';
 
 import 'home.dart';
 
@@ -33,7 +34,11 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: MyHomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyHomePage(),
+        '/admin': (context) => AdminPage(),
+      },
     );
   }
 }

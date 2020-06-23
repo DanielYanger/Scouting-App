@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="" />
+    <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="Admin Panel">
+      <change afterPath="$PROJECT_DIR$/scouting_app/lib/adminPanel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/settings.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -257,7 +262,8 @@
     <MESSAGE value="Password protect for deleting" />
     <MESSAGE value="Clean Up" />
     <MESSAGE value="1.5.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.5.1" />
+    <MESSAGE value="Admin Panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Panel" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -267,30 +273,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1592194067570" />
-    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1592771837725">
+    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1592875842959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592771837725" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592771864280">
+    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592875842959" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592875660116">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592771864280" />
-    <state width="1877" height="193" key="GridCell.Tab.0.bottom" timestamp="1592771870796">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592875660116" />
+    <state width="1877" height="193" key="GridCell.Tab.0.bottom" timestamp="1592875843198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592771870796" />
-    <state width="1877" height="193" key="GridCell.Tab.0.center" timestamp="1592771870796">
+    <state width="1877" height="193" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592875843198" />
+    <state width="1877" height="193" key="GridCell.Tab.0.center" timestamp="1592875843198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592771870796" />
-    <state width="1877" height="193" key="GridCell.Tab.0.left" timestamp="1592771870796">
+    <state width="1877" height="193" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592875843198" />
+    <state width="1877" height="193" key="GridCell.Tab.0.left" timestamp="1592875843198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592771870796" />
-    <state width="1877" height="193" key="GridCell.Tab.0.right" timestamp="1592771870796">
+    <state width="1877" height="193" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592875843198" />
+    <state width="1877" height="193" key="GridCell.Tab.0.right" timestamp="1592875843198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592771870796" />
+    <state width="1877" height="193" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592875843198" />
     <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1592016591038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
