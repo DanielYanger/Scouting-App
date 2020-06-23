@@ -95,7 +95,7 @@ class StationSelectorState extends State<StationSelector> {
                 MaterialButton(
                   color: Theme.of(context).primaryColor,
                   child: Text(
-                    "Submit",
+                    "Confirm",
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {
