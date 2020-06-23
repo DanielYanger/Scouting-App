@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="1.5.2 in code">
+    <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/settings.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APK/app-arm64-v8a-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/APK/app-arm64-v8a-release.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APK/app-armeabi-v7a-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/APK/app-armeabi-v7a-release.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APK/app-x86_64-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/APK/app-x86_64-release.apk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +31,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scouting_master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/APK" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="show.migrate.to.gradle.popup" value="false" />
@@ -243,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592876708922</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="1.5.2 in code">
+      <created>1592876891283</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1592876891283</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -263,7 +271,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="New App Icon" />
     <MESSAGE value="New Icons" />
@@ -296,10 +306,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1592194067570" />
-    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1592876852244">
+    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1592876890233">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592876852244" />
+    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592876890233" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592876805545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
