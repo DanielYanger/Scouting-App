@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:scoutingapp/FileUtils.dart';
 
 import 'home.dart';
@@ -13,9 +12,6 @@ class AdminPage extends StatefulWidget {
 }
 
 class AdminPageState extends State<AdminPage> {
-  final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();
-  final GlobalKey<FormBuilderState> _formKey = GlobalKey<FormBuilderState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,52 +39,21 @@ class AdminPageState extends State<AdminPage> {
                           ),
                         ),
                         title: const Text("Confirm"),
-                        content: Container(
-                          height: 129,
-                          child: Column(
-                            children: <Widget>[
-                              Text(
-                                  "Are you sure you wish to clear all forms and schedule?"),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              FormBuilder(
-                                key: _formKey,
-                                child: FormBuilderTextField(
-                                  attribute: "password",
-                                  validators: [
-                                    FormBuilderValidators.required(),
-                                    // ignore: missing_return
-                                    (val) {
-                                      if (val != "CRyptonite2001")
-                                        return "Incorrect Password";
-                                    },
-                                  ],
-                                  maxLines: 1,
-                                  obscureText: true,
-                                  decoration:
-                                      InputDecoration(labelText: "Password"),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
+                        content: Text(
+                            "Are you sure you wish to clear all forms and schedule?"),
                         actions: <Widget>[
                           FlatButton(
                             child: Text("CONFIRM"),
                             onPressed: () {
-                              print(_formKey);
-                              if (_formKey.currentState.saveAndValidate()) {
-                                try {
-                                  FileUtils.deleteData();
-                                } catch (e) {}
-                                Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => MyHomePage()),
-                                  (Route<dynamic> route) => false,
-                                );
-                              }
+                              try {
+                                FileUtils.deleteData();
+                              } catch (e) {}
+                              Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyHomePage()),
+                                (Route<dynamic> route) => false,
+                              );
                             },
                           ),
                           FlatButton(
@@ -120,51 +85,21 @@ class AdminPageState extends State<AdminPage> {
                             Radius.circular(10),
                           ),
                         ),
-                        content: Container(
-                          height: 129,
-                          child: Column(
-                            children: <Widget>[
-                              Text("Are you sure you wish to clear ALL data?"),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              FormBuilder(
-                                key: _fbKey,
-                                child: FormBuilderTextField(
-                                  attribute: "password",
-                                  validators: [
-                                    FormBuilderValidators.required(),
-                                    // ignore: missing_return
-                                    (val) {
-                                      if (val != "CRyptonite2001")
-                                        return "Incorrect Password";
-                                    },
-                                  ],
-                                  maxLines: 1,
-                                  obscureText: true,
-                                  decoration:
-                                      InputDecoration(labelText: "Password"),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
+                        content:
+                            Text("Are you sure you wish to clear ALL data?"),
                         actions: <Widget>[
                           FlatButton(
                             child: Text("CONFIRM"),
                             onPressed: () {
-                              print(_fbKey);
-                              if (_fbKey.currentState.saveAndValidate()) {
-                                try {
-                                  FileUtils.deleteData();
-                                } catch (e) {}
-                                Navigator.pushAndRemoveUntil(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => MyHomePage()),
-                                  (Route<dynamic> route) => false,
-                                );
-                              }
+                              try {
+                                FileUtils.deleteData();
+                              } catch (e) {}
+                              Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyHomePage()),
+                                (Route<dynamic> route) => false,
+                              );
                             },
                           ),
                           FlatButton(

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/stationSelector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/stationSelector.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/adminPanel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/adminPanel.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592875882613</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Station Selector wording change">
+      <created>1592875967671</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1592875967671</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -268,7 +275,8 @@
     <MESSAGE value="Clean Up" />
     <MESSAGE value="1.5.1" />
     <MESSAGE value="Admin Panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin Panel" />
+    <MESSAGE value="Station Selector wording change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Station Selector wording change" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -306,10 +314,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592016591038" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592771679292">
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592876036070">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592771679292" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592876036070" />
     <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1591995611804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
