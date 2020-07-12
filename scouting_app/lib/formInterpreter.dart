@@ -175,7 +175,7 @@ class FormCreator {
               attribute: tempWidget[1],
               decoration: InputDecoration(
                 labelText: tempWidget[1],
-                labelStyle: TextStyle(color: Colors.black, fontSize: 20),
+                labelStyle: TextStyle(fontSize: 20),
               ),
             ),
           ),

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/form.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/formInterpreter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/formInterpreter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/stationSelector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/stationSelector.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +263,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594520573888</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Form design overhaul">
+      <created>1594523109062</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1594523109062</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Form design overhaul">
+      <created>1594523118257</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1594523118257</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -311,7 +324,8 @@
     <MESSAGE value="1.5.2 in code" />
     <MESSAGE value="1.5.2 APKs" />
     <MESSAGE value="Schedule Page Design fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Schedule Page Design fix" />
+    <MESSAGE value="Form design overhaul" />
+    <option name="LAST_COMMIT_MESSAGE" value="Form design overhaul" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -321,10 +335,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1592194067570" />
-    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1594523104509">
+    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1594523116683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594523104509" />
+    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594523116683" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592876805545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
