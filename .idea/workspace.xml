@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/settings.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/adminPanel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/adminPanel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/pitForm.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/pitForm.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594592400092</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="1.6 pubsec">
+      <created>1594592442702</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1594592442702</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -322,7 +332,6 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Start of transition to Future Builder" />
     <MESSAGE value="Future Builder for Schedule" />
     <MESSAGE value="Future Builder for Match Form" />
     <MESSAGE value="Future Builder for Pit Form" />
@@ -347,7 +356,8 @@
     <MESSAGE value="Couple other design changes" />
     <MESSAGE value="Updated Build but forgot version" />
     <MESSAGE value="Exporting Data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exporting Data" />
+    <MESSAGE value="1.6 pubsec" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.6 pubsec" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -357,10 +367,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1592194067570" />
-    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1594592397378">
+    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1594592440649">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594592397378" />
+    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594592440649" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594589328804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

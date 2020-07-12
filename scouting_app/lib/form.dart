@@ -116,23 +116,26 @@ class MyFormPageState extends State<MyFormPage> {
                     print(children);
                   } else if (snapshot.hasData && snapshot.data.length <= 5) {
                     children = <Widget>[
-                      Card(
-                        child: ListTile(
-                          title: Center(child: Text("No Form Imported!")),
-                          subtitle: Text(
-                            "Please import a form in the settings.",
-                            textAlign: TextAlign.center,
-                          ),
-                          isThreeLine: true,
-                          leading: Icon(
-                            Icons.warning,
-                            size: 50,
-                            color: Colors.red,
-                          ),
-                          trailing: Icon(
-                            Icons.warning,
-                            size: 50,
-                            color: Colors.red,
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Card(
+                          child: ListTile(
+                            title: Center(child: Text("No Form Imported!")),
+                            subtitle: Text(
+                              "Please import a form in the settings.",
+                              textAlign: TextAlign.center,
+                            ),
+                            isThreeLine: true,
+                            leading: Icon(
+                              Icons.warning,
+                              size: 50,
+                              color: Colors.red,
+                            ),
+                            trailing: Icon(
+                              Icons.warning,
+                              size: 50,
+                              color: Colors.red,
+                            ),
                           ),
                         ),
                       )

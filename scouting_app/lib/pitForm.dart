@@ -56,7 +56,12 @@ class MyPitFormPageState extends State<MyPitFormPage> {
                           FormCreator.formCreator(fullForm, children, context);
                       children.add(
                         Padding(
-                          padding: const EdgeInsets.all(4.0),
+                          padding: EdgeInsets.only(
+                            bottom: 20.0,
+                            top: 10.0,
+                            left: 15.0,
+                            right: 15.0,
+                          ),
                           child: Row(
                             children: <Widget>[
                               Expanded(
@@ -110,23 +115,26 @@ class MyPitFormPageState extends State<MyPitFormPage> {
                       print(children);
                     } else if (snapshot.hasData && snapshot.data.length <= 5) {
                       children = <Widget>[
-                        Card(
-                          child: ListTile(
-                            title: Center(child: Text("No Form Imported!")),
-                            subtitle: Text(
-                              "Please import a form in the settings.",
-                              textAlign: TextAlign.center,
-                            ),
-                            isThreeLine: true,
-                            leading: Icon(
-                              Icons.warning,
-                              size: 50,
-                              color: Colors.red,
-                            ),
-                            trailing: Icon(
-                              Icons.warning,
-                              size: 50,
-                              color: Colors.red,
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Card(
+                            child: ListTile(
+                              title: Center(child: Text("No Form Imported!")),
+                              subtitle: Text(
+                                "Please import a form in the settings.",
+                                textAlign: TextAlign.center,
+                              ),
+                              isThreeLine: true,
+                              leading: Icon(
+                                Icons.warning,
+                                size: 50,
+                                color: Colors.red,
+                              ),
+                              trailing: Icon(
+                                Icons.warning,
+                                size: 50,
+                                color: Colors.red,
+                              ),
                             ),
                           ),
                         )

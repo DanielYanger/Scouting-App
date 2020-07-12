@@ -42,7 +42,7 @@ class MyHomePageState extends State<MyHomePage> {
           ],
         ),
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(15.0),
           child: ListView.builder(
               itemCount: 1,
               itemBuilder: (context, index) {

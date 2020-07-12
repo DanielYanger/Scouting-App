@@ -55,7 +55,54 @@ class AdminPageState extends State<AdminPage> {
                   size: 50,
                 ),
                 title: Text("Clear Forms"),
-                subtitle: Text("Clear all forms and schedule"),
+                subtitle: Text("Clear all forms"),
+                onTap: () async {
+                  return await showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(10),
+                            ),
+                          ),
+                          title: const Text("Confirm"),
+                          content:
+                              Text("Are you sure you wish to clear all forms?"),
+                          actions: <Widget>[
+                            FlatButton(
+                              child: Text("CONFIRM"),
+                              onPressed: () {
+                                try {
+                                  FileUtils.deleteForm();
+                                  FileUtils.deletePitForm();
+                                } catch (e) {}
+                                Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => MyHomePage()),
+                                  (Route<dynamic> route) => false,
+                                );
+                              },
+                            ),
+                            FlatButton(
+                              child: Text("CANCEL"),
+                              onPressed: () => Navigator.of(context).pop(),
+                            )
+                          ],
+                        );
+                      });
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(
+                  Icons.delete,
+                  size: 50,
+                ),
+                title: Text("Clear Schedule"),
+                subtitle: Text("Clear the schedule"),
                 onTap: () async {
                   return await showDialog(
                       context: context,
@@ -68,13 +115,13 @@ class AdminPageState extends State<AdminPage> {
                           ),
                           title: const Text("Confirm"),
                           content: Text(
-                              "Are you sure you wish to clear all forms and schedule?"),
+                              "Are you sure you wish to clear the schedule?"),
                           actions: <Widget>[
                             FlatButton(
                               child: Text("CONFIRM"),
                               onPressed: () {
                                 try {
-                                  FileUtils.deleteData();
+                                  FileUtils.deleteSchedule();
                                 } catch (e) {}
                                 Navigator.pushAndRemoveUntil(
                                   context,
