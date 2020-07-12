@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scouting_app/android/app/src/main/res/xml/provider_paths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/FileUtils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/FileUtils.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/adminPanel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/adminPanel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/settings.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,26 +362,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594525032092" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594529081429">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594589328804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594529081429" />
-    <state width="1877" height="193" key="GridCell.Tab.0.bottom" timestamp="1594525035758">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594589328804" />
+    <state width="1877" height="193" key="GridCell.Tab.0.bottom" timestamp="1594590740535">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594525035758" />
-    <state width="1877" height="193" key="GridCell.Tab.0.center" timestamp="1594525035758">
+    <state width="1877" height="193" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594590740535" />
+    <state width="1877" height="193" key="GridCell.Tab.0.center" timestamp="1594590740535">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594525035758" />
-    <state width="1877" height="193" key="GridCell.Tab.0.left" timestamp="1594525035757">
+    <state width="1877" height="193" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594590740535" />
+    <state width="1877" height="193" key="GridCell.Tab.0.left" timestamp="1594590740534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594525035757" />
-    <state width="1877" height="193" key="GridCell.Tab.0.right" timestamp="1594525035758">
+    <state width="1877" height="193" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594590740534" />
+    <state width="1877" height="193" key="GridCell.Tab.0.right" timestamp="1594590740535">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="193" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594525035758" />
+    <state width="1877" height="193" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594590740535" />
     <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1592016591038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

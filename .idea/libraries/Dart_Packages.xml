@@ -149,6 +149,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_share">
+          <value>
+            <list>
+              <option value="D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_share-1.0.2+1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_test">
           <value>
             <list>
@@ -438,6 +445,7 @@
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_keyboard_visibility-2.0.0/lib" />
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_launcher_icons-0.7.5/lib" />
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.8/lib" />
+      <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_share-1.0.2+1/lib" />
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_touch_spin-1.0.1/lib" />
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_typeahead-1.8.3/lib" />
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.1/lib" />

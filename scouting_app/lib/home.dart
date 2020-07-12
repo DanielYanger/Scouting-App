@@ -89,23 +89,27 @@ class MyHomePageState extends State<MyHomePage> {
                       }
                     } else if (snapshot.hasData && snapshot.data.length <= 5) {
                       children = <Widget>[
-                        Card(
-                          child: ListTile(
-                            title: Center(child: Text("No Schedule Imported!")),
-                            subtitle: Text(
-                              "Please import a schedule in the settings.",
-                              textAlign: TextAlign.center,
-                            ),
-                            isThreeLine: true,
-                            leading: Icon(
-                              Icons.warning,
-                              size: 50,
-                              color: Colors.red,
-                            ),
-                            trailing: Icon(
-                              Icons.warning,
-                              size: 50,
-                              color: Colors.red,
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Card(
+                            child: ListTile(
+                              title:
+                                  Center(child: Text("No Schedule Imported!")),
+                              subtitle: Text(
+                                "Please import a schedule in the settings.",
+                                textAlign: TextAlign.center,
+                              ),
+                              isThreeLine: true,
+                              leading: Icon(
+                                Icons.warning,
+                                size: 50,
+                                color: Colors.red,
+                              ),
+                              trailing: Icon(
+                                Icons.warning,
+                                size: 50,
+                                color: Colors.red,
+                              ),
                             ),
                           ),
                         )

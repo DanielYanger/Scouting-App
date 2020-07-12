@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter_share/flutter_share.dart';
 import 'package:path_provider/path_provider.dart';
 
 class FileUtils {
@@ -168,5 +169,25 @@ class FileUtils {
       saveToFileJSON(data, "PitMasterData");
       return (data);
     }
+  }
+
+  static Future<void> exportPitData() async {
+    final path = await getFilePit;
+    print(path.path);
+    await FlutterShare.shareFile(
+      title: 'Export Pit Data',
+      text: 'Exporting pit data',
+      filePath: path.path,
+    );
+  }
+
+  static Future<void> exportMatchData() async {
+    final path = await getFile;
+    print(path.path);
+    await FlutterShare.shareFile(
+      title: 'Export Match Data',
+      text: 'Exporting match data',
+      filePath: path.path,
+    );
   }
 }
