@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:scoutingapp/formCreator.dart';
+import 'package:scoutingapp/formInterpreter.dart';
 
 import 'FileUtils.dart';
 

@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:scoutingapp/FileUtils.dart';
-import 'package:scoutingapp/formCreator.dart';
+import 'package:scoutingapp/formInterpreter.dart';
 
 import 'form.dart' as FormBuilder;
 import 'home.dart';
