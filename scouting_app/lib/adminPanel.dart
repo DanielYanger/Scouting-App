@@ -20,7 +20,7 @@ class AdminPageState extends State<AdminPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: ListView(
+        child: Column(
           children: <Widget>[
             Card(
               child: ListTile(

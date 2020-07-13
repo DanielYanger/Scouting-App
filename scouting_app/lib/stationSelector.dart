@@ -63,72 +63,75 @@ class StationSelectorState extends State<StationSelector> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Select Station")),
-      body: Center(
-        child: FormBuilder(
-          key: _fbKey,
-          child: Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: FormBuilderRadio(
-                  decoration: InputDecoration(
-                    labelText: 'Station',
-                    labelStyle: TextStyle(color: Colors.black, fontSize: 20),
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Center(
+          child: FormBuilder(
+            key: _fbKey,
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: FormBuilderRadio(
+                    decoration: InputDecoration(
+                      labelText: 'Station',
+                      labelStyle: TextStyle(color: Colors.black, fontSize: 20),
+                    ),
+                    activeColor: Theme.of(context).primaryColor,
+                    attribute: "station",
+                    onChanged: _onChanged,
+                    validators: [FormBuilderValidators.required()],
+                    options: [
+                      "Red 1",
+                      "Red 2",
+                      'Red 3',
+                      'Blue 1',
+                      'Blue 2',
+                      'Blue 3',
+                      "Pit Scouting"
+                    ]
+                        .map((lang) => FormBuilderFieldOption(
+                              value: lang,
+                              child: Text('$lang'),
+                            ))
+                        .toList(growable: false),
+                    initialValue: initialStation(station),
                   ),
-                  activeColor: Theme.of(context).primaryColor,
-                  attribute: "station",
-                  onChanged: _onChanged,
-                  validators: [FormBuilderValidators.required()],
-                  options: [
-                    "Red 1",
-                    "Red 2",
-                    'Red 3',
-                    'Blue 1',
-                    'Blue 2',
-                    'Blue 3',
-                    "Pit Scouting"
-                  ]
-                      .map((lang) => FormBuilderFieldOption(
-                            value: lang,
-                            child: Text('$lang'),
-                          ))
-                      .toList(growable: false),
-                  initialValue: initialStation(station),
                 ),
-              ),
-              MaterialButton(
-                color: Theme.of(context).primaryColor,
-                child: Text(
-                  "Confirm",
-                  style: TextStyle(color: Colors.white),
-                ),
-                onPressed: () {
-                  if (_fbKey.currentState.saveAndValidate()) {
-                    String value = _fbKey.currentState.value.toString();
-                    if (value == ("{station: Red 1}")) {
-                      station = 0;
-                    } else if (value == ("{station: Red 2}")) {
-                      station = 1;
-                    } else if (value == ("{station: Red 3}")) {
-                      station = 2;
-                    } else if (value == ("{station: Blue 1}")) {
-                      station = 3;
-                    } else if (value == ("{station: Blue 2}")) {
-                      station = 4;
-                    } else if (value == ("{station: Blue 3}")) {
-                      station = 5;
-                    } else if (value == ("{station: Pit Scouting}")) {
-                      station = 6;
+                MaterialButton(
+                  color: Theme.of(context).primaryColor,
+                  child: Text(
+                    "Confirm",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onPressed: () {
+                    if (_fbKey.currentState.saveAndValidate()) {
+                      String value = _fbKey.currentState.value.toString();
+                      if (value == ("{station: Red 1}")) {
+                        station = 0;
+                      } else if (value == ("{station: Red 2}")) {
+                        station = 1;
+                      } else if (value == ("{station: Red 3}")) {
+                        station = 2;
+                      } else if (value == ("{station: Blue 1}")) {
+                        station = 3;
+                      } else if (value == ("{station: Blue 2}")) {
+                        station = 4;
+                      } else if (value == ("{station: Blue 3}")) {
+                        station = 5;
+                      } else if (value == ("{station: Pit Scouting}")) {
+                        station = 6;
+                      }
                     }
-                  }
-                  Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(builder: (context) => MyHomePage()),
-                    (Route<dynamic> route) => false,
-                  );
-                },
-              ),
-            ],
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyHomePage()),
+                      (Route<dynamic> route) => false,
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),

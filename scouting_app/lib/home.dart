@@ -41,107 +41,104 @@ class MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: ListView.builder(
-              itemCount: 1,
-              itemBuilder: (context, index) {
-                return FutureBuilder<String>(
-                  future:
-                      _schedule, // a previously-obtained Future<String> or null
-                  builder:
-                      (BuildContext context, AsyncSnapshot<String> snapshot) {
-                    List<Widget> children = [];
-                    if (snapshot.hasData &&
-                        snapshot.data.toString().length > 5) {
-                      String fullSchedule = snapshot.data.toString();
-                      int station = selector.getStation();
-                      List<List<String>> tempMatch =
-                          selector.modifiedSchedule(station, fullSchedule);
-                      for (List<String> i in tempMatch) {
-                        children.add(
-                          Container(
-                            decoration: const BoxDecoration(
-                              color: Color.fromARGB(75, 229, 229, 229),
-                            ),
-                            child: Card(
-                              child: ListTile(
-                                title: Text('${i[0]}'),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: !isPit
-                                            ? (context) => MyFormPage(
-                                                title: '${i[0]}: ${i[1]}')
-                                            : (context) => MyPitFormPage(
-                                                title: '${i[1]}: ${i[0]}')),
-                                  );
-                                },
-                                subtitle: Text("${i[1]}"),
-                              ),
-                              borderOnForeground: true,
-                              shadowColor: Colors.transparent,
-                              //color: Theme.of(context).primaryColor,
-                            ),
+        body: ListView.builder(
+            itemCount: 1,
+            itemBuilder: (context, index) {
+              return FutureBuilder<String>(
+                future:
+                    _schedule, // a previously-obtained Future<String> or null
+                builder:
+                    (BuildContext context, AsyncSnapshot<String> snapshot) {
+                  List<Widget> children = [];
+                  if (snapshot.hasData && snapshot.data.toString().length > 5) {
+                    String fullSchedule = snapshot.data.toString();
+                    int station = selector.getStation();
+                    List<List<String>> tempMatch =
+                        selector.modifiedSchedule(station, fullSchedule);
+                    for (List<String> i in tempMatch) {
+                      children.add(
+                        Container(
+                          padding: EdgeInsets.only(
+                              left: 15, right: 15, top: 5, bottom: 5),
+                          decoration: const BoxDecoration(
+                            color: Color.fromARGB(75, 229, 229, 229),
                           ),
-                        );
-                      }
-                    } else if (snapshot.hasData && snapshot.data.length <= 5) {
-                      children = <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
                           child: Card(
                             child: ListTile(
-                              title:
-                                  Center(child: Text("No Schedule Imported!")),
-                              subtitle: Text(
-                                "Please import a schedule in the settings.",
-                                textAlign: TextAlign.center,
-                              ),
-                              isThreeLine: true,
-                              leading: Icon(
-                                Icons.warning,
-                                size: 50,
-                                color: Colors.red,
-                              ),
-                              trailing: Icon(
-                                Icons.warning,
-                                size: 50,
-                                color: Colors.red,
-                              ),
+                              title: Text('${i[0]}'),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: !isPit
+                                          ? (context) => MyFormPage(
+                                              title: '${i[0]}: ${i[1]}')
+                                          : (context) => MyPitFormPage(
+                                              title: '${i[1]}: ${i[0]}')),
+                                );
+                              },
+                              subtitle: Text("${i[1]}"),
                             ),
-                          ),
-                        )
-                      ];
-                    } else {
-                      children = <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: SizedBox(
-                            child: CircularProgressIndicator(
-                              value: null,
-                            ),
-                            width: 60,
-                            height: 60,
+                            borderOnForeground: true,
+                            shadowColor: Colors.transparent,
+                            //color: Theme.of(context).primaryColor,
                           ),
                         ),
-                        const Padding(
-                          padding: EdgeInsets.only(top: 16),
-                          child: Text("Fetching Schedule"),
-                        )
-                      ];
+                      );
                     }
-                    return Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: children,
+                  } else if (snapshot.hasData && snapshot.data.length <= 5) {
+                    children = <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Card(
+                          child: ListTile(
+                            title: Center(child: Text("No Schedule Imported!")),
+                            subtitle: Text(
+                              "Please import a schedule in the settings.",
+                              textAlign: TextAlign.center,
+                            ),
+                            isThreeLine: true,
+                            leading: Icon(
+                              Icons.warning,
+                              size: 50,
+                              color: Colors.red,
+                            ),
+                            trailing: Icon(
+                              Icons.warning,
+                              size: 50,
+                              color: Colors.red,
+                            ),
+                          ),
+                        ),
+                      )
+                    ];
+                  } else {
+                    children = <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          child: CircularProgressIndicator(
+                            value: null,
+                          ),
+                          width: 60,
+                          height: 60,
+                        ),
                       ),
-                    );
-                  },
-                );
-              }),
-        ));
+                      const Padding(
+                        padding: EdgeInsets.only(top: 16),
+                        child: Text("Fetching Schedule"),
+                      )
+                    ];
+                  }
+                  return Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: children,
+                    ),
+                  );
+                },
+              );
+            }));
   }
 }
