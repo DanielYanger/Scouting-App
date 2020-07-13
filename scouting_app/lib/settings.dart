@@ -168,7 +168,7 @@ class MySettingPageState extends State<MySettingPage> {
                   showAboutDialog(
                       context: context,
                       applicationIcon: Icon(ScoutingIcons.radioactive),
-                      applicationVersion: '1.6.0',
+                      applicationVersion: '1.6.1',
                       applicationLegalese:
                           "This app was developed by Daniel Yang, a programmer for FRC Team 624. This is one of the two apps developed for the Team 624 Scouting Team for use in many years to come. The purpose of this app is to allow scouts to use the team devices to scout, independent of any connection.");
                 },
