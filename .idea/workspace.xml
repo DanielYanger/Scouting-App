@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scouting_app/icons/CustomScoutingIcon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scouting_app/lib/custom_scouting_icon_icons.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,23 +31,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scouting_app/icons" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\icons" />
+      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib" />
+      <recent name="D:\Documents\Flutter_Apps\Scouting_App\APK" />
+      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib\assets" />
+      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib\assests" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app" />
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib\assets" />
       <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Documents\Flutter_Apps\Scouting_App\APK" />
-      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib\assets" />
-      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib" />
-      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\icons" />
-      <recent name="D:\Documents\Flutter_Apps\Scouting_App\scouting_app\lib\assests" />
     </key>
   </component>
   <component name="RunManager">
@@ -356,7 +359,6 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Color changes" />
     <MESSAGE value="Color changes for Pit Form" />
     <MESSAGE value="Optimizing Methods" />
     <MESSAGE value="Design Updates" />
@@ -381,7 +383,8 @@
     <MESSAGE value="1.6.0 Build" />
     <MESSAGE value="Design + Color Update" />
     <MESSAGE value="1.6.1 Build Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.6.1 Build Update" />
+    <MESSAGE value="Importing Custom Icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Importing Custom Icons" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -391,10 +394,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1592194067570" />
-    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1594603262722">
+    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1595297690101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594603262722" />
+    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595297690101" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594603007908">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

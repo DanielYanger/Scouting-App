@@ -73,11 +73,9 @@ flutter:
     - family: ScoutingIcons
       fonts:
         - asset: icons/ScoutingIcons.ttf
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+    - family:  CustomScoutingIcon
+      fonts:
+        - asset: icons/CustomScoutingIcon.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
