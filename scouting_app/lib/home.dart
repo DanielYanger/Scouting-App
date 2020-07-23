@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:scoutingapp/FileUtils.dart';
+import 'package:scoutingapp/custom_scouting_icon_icons.dart';
 import 'package:scoutingapp/form.dart';
 
 import 'form.dart';
 import 'pitForm.dart';
-import 'scouting_icons_icons.dart';
 import 'settings.dart';
 import 'stationSelector.dart' as selector;
 
@@ -26,7 +26,7 @@ class MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("624 Scouting App"),
           leading: Icon(
-            ScoutingIcons.radioactive,
+            CustomScoutingIcon.radioactive,
             size: 50,
           ),
           actions: <Widget>[

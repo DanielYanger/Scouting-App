@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:scoutingapp/FileUtils.dart';
+import 'package:scoutingapp/custom_scouting_icon_icons.dart';
 
 import 'home.dart';
 
@@ -25,7 +26,7 @@ class AdminPageState extends State<AdminPage> {
             Card(
               child: ListTile(
                 leading: Icon(
-                  Icons.file_upload,
+                  CustomScoutingIcon.export_match_data,
                   size: 50,
                 ),
                 title: Text("Export Match Data"),
@@ -38,7 +39,7 @@ class AdminPageState extends State<AdminPage> {
             Card(
               child: ListTile(
                 leading: Icon(
-                  Icons.file_upload,
+                  CustomScoutingIcon.export_pit_data,
                   size: 50,
                 ),
                 title: Text("Export Pit Data"),
@@ -51,7 +52,7 @@ class AdminPageState extends State<AdminPage> {
             Card(
               child: ListTile(
                 leading: Icon(
-                  Icons.delete,
+                  CustomScoutingIcon.clear_forms,
                   size: 50,
                 ),
                 title: Text("Clear Forms"),
@@ -98,7 +99,7 @@ class AdminPageState extends State<AdminPage> {
             Card(
               child: ListTile(
                 leading: Icon(
-                  Icons.delete,
+                  CustomScoutingIcon.clear_schedule,
                   size: 50,
                 ),
                 title: Text("Clear Schedule"),

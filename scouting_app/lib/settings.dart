@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:scoutingapp/custom_scouting_icon_icons.dart';
 import 'package:scoutingapp/scouting_icons_icons.dart';
 
 import 'formReader.dart';
@@ -48,7 +49,7 @@ class MySettingPageState extends State<MySettingPage> {
             Card(
               child: ListTile(
                 leading: Icon(
-                  Icons.restore_page,
+                  CustomScoutingIcon.import_match_form,
                   size: 50,
                 ),
                 title: Text("Import Match Form"),
@@ -64,7 +65,7 @@ class MySettingPageState extends State<MySettingPage> {
             Card(
               child: ListTile(
                 leading: Icon(
-                  Icons.build,
+                  CustomScoutingIcon.import_pit_form,
                   size: 50,
                 ),
                 title: Text("Import Pit Form"),
@@ -80,7 +81,7 @@ class MySettingPageState extends State<MySettingPage> {
             Card(
               child: ListTile(
                 leading: Icon(
-                  Icons.cloud_download,
+                  CustomScoutingIcon.import_schedule,
                   size: 50,
                 ),
                 title: Text("Import Schedule"),
