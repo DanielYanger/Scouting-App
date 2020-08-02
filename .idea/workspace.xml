@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="deb7aba1-145d-49b1-8330-cf9af80eab53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/importSchedule.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/importSchedule.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scouting_app/lib/stationSelector.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/stationSelector.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/lib/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/lib/settings.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scouting_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scouting_app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595467449506</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Team List importing">
+      <created>1596393496824</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1596393496824</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -373,7 +379,6 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Design Updates" />
     <MESSAGE value="Loading Wheel Implementation" />
     <MESSAGE value="Delete All" />
     <MESSAGE value="Delete data" />
@@ -398,7 +403,8 @@
     <MESSAGE value="Importing Custom Icons" />
     <MESSAGE value="Custom Icons" />
     <MESSAGE value="1.6.2 Build" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.6.2 Build" />
+    <MESSAGE value="Team List importing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team List importing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -408,30 +414,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1592194067570" />
-    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1595467447142">
+    <state x="611" y="114" key="CommitChangelistDialog2" timestamp="1596393491094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595467447142" />
+    <state x="611" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596393491094" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594603007908">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594603007908" />
-    <state width="1877" height="185" key="GridCell.Tab.0.bottom" timestamp="1595467453893">
+    <state width="1877" height="185" key="GridCell.Tab.0.bottom" timestamp="1596393523847">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595467453893" />
-    <state width="1877" height="185" key="GridCell.Tab.0.center" timestamp="1595467453893">
+    <state width="1877" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596393523847" />
+    <state width="1877" height="185" key="GridCell.Tab.0.center" timestamp="1596393523847">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595467453893" />
-    <state width="1877" height="185" key="GridCell.Tab.0.left" timestamp="1595467453893">
+    <state width="1877" height="185" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596393523847" />
+    <state width="1877" height="185" key="GridCell.Tab.0.left" timestamp="1596393523846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595467453893" />
-    <state width="1877" height="185" key="GridCell.Tab.0.right" timestamp="1595467453893">
+    <state width="1877" height="185" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596393523846" />
+    <state width="1877" height="185" key="GridCell.Tab.0.right" timestamp="1596393523847">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="185" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595467453893" />
+    <state width="1877" height="185" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596393523847" />
     <state x="100" y="100" width="1720" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1592016591038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
