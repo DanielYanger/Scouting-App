@@ -5,6 +5,7 @@ import 'package:scoutingapp/custom_scouting_icon_icons.dart';
 import 'package:scoutingapp/form.dart';
 
 import 'form.dart';
+import 'importSchedule.dart' as importSchedule;
 import 'pitForm.dart';
 import 'settings.dart';
 import 'stationSelector.dart' as selector;
@@ -55,36 +56,65 @@ class MyHomePageState extends State<MyHomePage> {
                     int station = selector.getStation();
                     List<List<String>> tempMatch =
                         selector.modifiedSchedule(station, fullSchedule);
-                    for (List<String> i in tempMatch) {
-                      children.add(
-                        Container(
-                          padding: EdgeInsets.only(
-                              left: 15, right: 15, top: 5, bottom: 5),
-                          decoration: const BoxDecoration(
-                            color: Color.fromARGB(75, 229, 229, 229),
+                    if (!importSchedule.isTeamOnly() || station == 6) {
+                      for (List<String> i in tempMatch) {
+                        children.add(
+                          Container(
+                            padding: EdgeInsets.only(
+                                left: 15, right: 15, top: 5, bottom: 5),
+                            decoration: const BoxDecoration(
+                              color: Color.fromARGB(75, 229, 229, 229),
+                            ),
+                            child: Card(
+                              child: ListTile(
+                                title: Text('${i[0]}'),
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: !isPit
+                                            ? (context) => MyFormPage(
+                                                title: '${i[0]}: ${i[1]}')
+                                            : (context) => MyPitFormPage(
+                                                title: '${i[1]}: ${i[0]}')),
+                                  );
+                                },
+                                subtitle: Text("${i[1]}"),
+                              ),
+                              borderOnForeground: true,
+                              shadowColor: Colors.transparent,
+                              //color: Theme.of(context).primaryColor,
+                            ),
                           ),
+                        );
+                      }
+                    } else {
+                      children = <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
                           child: Card(
                             child: ListTile(
-                              title: Text('${i[0]}'),
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: !isPit
-                                          ? (context) => MyFormPage(
-                                              title: '${i[0]}: ${i[1]}')
-                                          : (context) => MyPitFormPage(
-                                              title: '${i[1]}: ${i[0]}')),
-                                );
-                              },
-                              subtitle: Text("${i[1]}"),
+                              title:
+                                  Center(child: Text("No Schedule Imported!")),
+                              subtitle: Text(
+                                "Please import a schedule in the settings.",
+                                textAlign: TextAlign.center,
+                              ),
+                              isThreeLine: true,
+                              leading: Icon(
+                                Icons.warning,
+                                size: 50,
+                                color: Colors.red,
+                              ),
+                              trailing: Icon(
+                                Icons.warning,
+                                size: 50,
+                                color: Colors.red,
+                              ),
                             ),
-                            borderOnForeground: true,
-                            shadowColor: Colors.transparent,
-                            //color: Theme.of(context).primaryColor,
                           ),
-                        ),
-                      );
+                        )
+                      ];
                     }
                   } else if (snapshot.hasData && snapshot.data.length <= 5) {
                     children = <Widget>[

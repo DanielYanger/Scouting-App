@@ -15,15 +15,26 @@ int getStation() {
   return station;
 }
 
-List<List<String>> modifiedSchedule(int state, String schedule) {
+List<List<String>> modifiedSchedule(int station, String schedule) {
   //stations go from 0-5
   List<List<String>> modifiedMatches = [];
   List<List<String>> matches = importSchedule.getSchedule(station, schedule);
-  if (station == 6) {
-    modifiedMatches = matches;
+  bool teamOnly = importSchedule.isTeamOnly();
+  if (teamOnly) {
+    if (station == 6) {
+      modifiedMatches = matches;
+    } else {
+      modifiedMatches = [
+        [""]
+      ];
+    }
   } else {
-    for (int i = station; i < matches.length; i += 6) {
-      modifiedMatches.add(matches[i]);
+    if (station == 6) {
+      modifiedMatches = matches;
+    } else {
+      for (int i = station; i < matches.length; i += 6) {
+        modifiedMatches.add(matches[i]);
+      }
     }
   }
   return modifiedMatches;

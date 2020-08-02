@@ -11,9 +11,14 @@ class ImportScreen extends StatefulWidget {
 }
 
 String schedule = "";
+bool teamOnly = false;
 
 String fullSchedule() {
   return schedule;
+}
+
+bool isTeamOnly() {
+  return teamOnly;
 }
 
 List<List<String>> getSchedule(int station, String schedules) {
@@ -22,11 +27,22 @@ List<List<String>> getSchedule(int station, String schedules) {
   if (schedules.length != 0) {
     List<String> holder = schedules.split(";");
     holder.removeLast();
-    if (station != 6) {
+    if (holder[0] == "TEAM LIST") {
+      teamOnly = true;
+      for (int i = 1; i < holder.length; i++) {
+        teams.add(int.parse(holder[i]));
+      }
+      teams.sort();
+      for (int i in teams) {
+        matches.add([i.toString(), "Pit Scouting"]);
+      }
+    } else if (station != 6) {
+      teamOnly = false;
       for (String i in holder) {
         matches.add(i.split(","));
       }
     } else if (station == 6) {
+      teamOnly = false;
       outerLoop:
       for (String i in holder) {
         List<String> temp = i.split(",");
