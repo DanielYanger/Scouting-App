@@ -22,3 +22,6 @@ The password is: CRyptonite2001
 
 #### Exporting Data
 Select to export either the scouting data or pit data. Save the file using ES File Explorer. Make sure you choose the rename option instead of the overwrite option. This will create a new file with a number after it denoting the version number.
+
+#### Clearing Data
+It does what is says. Only do this after a competition and you have verified that the data has been transfered successfully. 0% Data Loss!
